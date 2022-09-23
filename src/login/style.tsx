@@ -11,7 +11,49 @@ interface Size {
   left: number;
 }
 
-export const accountTxt = styled.h1``;
+interface IconName {
+  Name: string;
+}
+
+export const Icons = styled.div`
+  display: flex;
+  position: absolute;
+  width: 33%;
+  height: 33%;
+  top: 33%;
+  left: 33%;
+  background-image: url(${(props: IconName) => props.Name});
+  background-size: cover;
+  z-index: 1;
+`;
+
+export const IconDiv = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  position: absolute;
+  width: 15%;
+  height: 27%;
+  margin: 5px auto;
+  top: ${(props: TopIndex) => props.topIndex * 32}%;
+  left: 0%;
+  border: none;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  font-family: "Noto-Sans";
+  z-index: 1;
+  background-color: white;
+`;
+
+export const accountTxt = styled.h1`
+  width: 19%;
+  top: -1%;
+  left: 3%;
+  display: flex;
+  position: absolute;
+  font-family: "Noto-Sans";
+  font-weight: normal;
+  font-size: 18px;
+`;
 
 export const Letter = styled.h1`
   font-family: "ULTRA";
@@ -23,22 +65,28 @@ export const Letter = styled.h1`
 `;
 
 export const formInput = styled.input`
+  box-sizing: border-box;
   display: flex;
   position: absolute;
-  width: 100%;
-  height: 26%;
+  width: 85%;
+  height: 27%;
   margin: 5px auto;
   top: ${(props: TopIndex) => props.topIndex * 32}%;
+  left: 15%;
   border: none;
-  border-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  z-index: 0;
   ::placeholder {
     font-family: "Noto-Sans";
-    font-size: 14px;
     margin-left: 10px;
+  }
+  :focus {
+    outline: none;
   }
 `;
 
-export const infoInput = styled.input`
+export const infoInput = styled.button`
   width: 23%;
   height: 63%;
   border: none;
