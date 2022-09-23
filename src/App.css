@@ -3,3 +3,13 @@
   font-weight: 400;
   src: url("./fonts/Ultra-Regular.ttf");
 }
+
+@font-face {
+  font-family: "Noto-Sans";
+  font-weight: 400;
+  src: url("./fonts/Noto_Sans/NotoSans-Black.ttf");
+}
+
+body {
+  overflow: hidden;
+}

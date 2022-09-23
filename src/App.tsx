@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import "./App.css";
 import * as S from "./login/style";
 function App() {
@@ -12,12 +13,13 @@ function App() {
           <S.formInput topIndex={2} placeholder="아이디"></S.formInput>
           <S.formInput topIndex={3} placeholder="비밀번호"></S.formInput>
         </S.inputDiv>
-        <S.inputDiv height={12} width={55} top={67} left={19}>
-          <S.infoInput placeholder="학년" ></ S.infoInput>
-          <S.infoInput placeholder="반" ></ S.infoInput>
-          <S.infoInput placeholder="번호" ></ S.infoInput>
+        <S.inputDiv height={12} width={55} top={67} left={21}>
+          <S.infoInput placeholder="학년"></S.infoInput>
+          <S.infoInput placeholder="반"></S.infoInput>
+          <S.infoInput placeholder="번호"></S.infoInput>
         </S.inputDiv>
       </S.loginForm>
+      <S.loginFormShadow></S.loginFormShadow>
     </>
   );
 }

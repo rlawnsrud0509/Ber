@@ -11,6 +11,8 @@ interface Size {
   left: number;
 }
 
+export const accountTxt = styled.h1``;
+
 export const Letter = styled.h1`
   font-family: "ULTRA";
   font-style: normal;
@@ -29,6 +31,11 @@ export const formInput = styled.input`
   top: ${(props: TopIndex) => props.topIndex * 32}%;
   border: none;
   border-radius: 40px;
+  ::placeholder {
+    font-family: "Noto-Sans";
+    font-size: 14px;
+    margin-left: 10px;
+  }
 `;
 
 export const infoInput = styled.input`
@@ -36,9 +43,11 @@ export const infoInput = styled.input`
   height: 63%;
   border: none;
   border-radius: 20px;
+  margin: 1%;
 `;
 
 export const inputDiv = styled.div`
+  text-indent: 500px;
   display: flex;
   position: absolute;
   width: ${(props: Size) => props.width}%;
@@ -52,16 +61,29 @@ export const inputDiv = styled.div`
 
 export const loginForm = styled.div`
   display: flex;
-  width: 46%;
+  width: 40%;
   height: 85%;
   top: 25%;
-  left: 26%;
+  left: 28%;
   position: absolute;
   box-sizing: border-box;
   background-color: #98adc7;
   color: black;
-  border: 1px solid black;
+  border: none;
   border-radius: 90px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   justify-content: center;
+`;
+
+export const loginFormShadow = styled.div`
+  display: flex;
+  position: absolute;
+  z-index: -1;
+  background-color: #494949;
+  opacity: 0.7;
+  filter: blur(50px);
+  width: 36%;
+  height: 75%;
+  top: 36%;
+  left: 33%;
 `;
