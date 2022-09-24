@@ -9,8 +9,11 @@ function SignUp() {
   return (
     <>
       <S.loginForm width={45} height={100} top={20} left={28}>
+        <S.berLogo top={-8} left={13} width={31} height={16}>
+          Ber Logo
+        </S.berLogo>
         <S.Letter>Sign Up</S.Letter>
-        <S.berLogo top={106} left={13} width={234} height={133}></S.berLogo>
+
         <S.inputDiv height={31} width={59} top={13} left={21}>
           <S.accountTxt top={-1} left={3}>
             <br />

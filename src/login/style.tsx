@@ -167,13 +167,12 @@ export const loginFormShadow = styled.div`
 `;
 
 export const berLogo = styled.div`
-  width: ${(props: SizePosition) => props.width}px;
-  height: ${(props: SizePosition) => props.height}px;
+  width: ${(props: SizePosition) => props.width}%;
+  height: ${(props: SizePosition) => props.height}%;
   top: ${(props: SizePosition) => props.top}%;
   left: ${(props: SizePosition) => props.left}%;
   position: absolute;
-  display: flex;
-  background-image: url("../resource/Ber_Logo.svg");
+  background-image: url("../resource/Ber_Logo.png");
   background-size: cover;
-  background-color: black;
+  background-color: aqua;
 `;
