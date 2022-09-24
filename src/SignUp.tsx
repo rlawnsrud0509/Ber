@@ -10,29 +10,47 @@ function SignUp() {
     <>
       <S.loginForm width={45} height={100} top={20} left={28}>
         <S.Letter>Sign Up</S.Letter>
-
+        <S.berLogo top={106} left={13} width={234} height={133}></S.berLogo>
         <S.inputDiv height={31} width={59} top={13} left={21}>
           <S.accountTxt top={-1} left={3}>
             <br />
             계정 정보
           </S.accountTxt>
 
-          <S.formInput topIndex={1} placeholder="학교 이메일"></S.formInput>
-          <S.IconDiv topIndex={1}>
-            <S.Icons Name={Email}></S.Icons>
-            <S.CheckIcons Name={Check}></S.CheckIcons>
+          <S.formInput
+            left={15}
+            top={1}
+            width={85}
+            height={27}
+            placeholder="학교 이메일"
+          ></S.formInput>
+          <S.IconDiv left={0} top={1} width={15} height={27}>
+            <S.Icons left={33} Name={Email}></S.Icons>
+            <S.CheckIcons left={600} Name={Check}></S.CheckIcons>
           </S.IconDiv>
 
-          <S.formInput topIndex={2} placeholder="아이디"></S.formInput>
-          <S.IconDiv topIndex={2}>
-            <S.Icons Name={Idcard}></S.Icons>
-            <S.CheckIcons Name={Check}></S.CheckIcons>
+          <S.formInput
+            left={15}
+            top={2}
+            width={85}
+            height={27}
+            placeholder="아이디"
+          ></S.formInput>
+          <S.IconDiv left={0} top={2} width={15} height={27}>
+            <S.Icons left={33} Name={Idcard}></S.Icons>
+            <S.CheckIcons left={600} Name={Check}></S.CheckIcons>
           </S.IconDiv>
 
-          <S.formInput topIndex={3} placeholder="비밀번호"></S.formInput>
-          <S.IconDiv topIndex={3}>
-            <S.Icons Name={Key}></S.Icons>
-            <S.CheckIcons Name={Check}></S.CheckIcons>
+          <S.formInput
+            left={15}
+            top={3}
+            width={85}
+            height={27}
+            placeholder="비밀번호"
+          ></S.formInput>
+          <S.IconDiv left={0} top={3} width={15} height={27}>
+            <S.Icons left={33} Name={Key}></S.Icons>
+            <S.CheckIcons left={600} Name={Check}></S.CheckIcons>
           </S.IconDiv>
         </S.inputDiv>
 
@@ -88,7 +106,12 @@ function SignUp() {
           </S.infoInput>
         </S.inputDiv>
       </S.loginForm>
-      <S.loginFormShadow></S.loginFormShadow>
+      <S.loginFormShadow
+        left={36}
+        top={75}
+        width={36}
+        height={73}
+      ></S.loginFormShadow>
     </>
   );
 }

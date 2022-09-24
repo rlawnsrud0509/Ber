@@ -1,10 +1,7 @@
 import styled from "styled-components";
+import { isPropertySignature } from "typescript";
 
-interface TopIndex {
-  topIndex: number;
-}
-
-interface Size {
+interface SizePosition {
   width: number;
   height: number;
   top: number;
@@ -13,6 +10,7 @@ interface Size {
 
 interface IconName {
   Name: string;
+  left: number;
 }
 
 interface txtPosition {
@@ -26,7 +24,7 @@ export const Icons = styled.div`
   width: 33%;
   height: 33%;
   top: 33%;
-  left: 33%;
+  left: ${(props: IconName) => props.left}%;
   background-image: url(${(props: IconName) => props.Name});
   background-size: cover;
   z-index: 1;
@@ -38,7 +36,7 @@ export const CheckIcons = styled.div`
   width: 33%;
   height: 33%;
   top: 33%;
-  left: 600%;
+  left: ${(props: IconName) => props.left}%;
   background-image: url(${(props: IconName) => props.Name});
   background-size: cover;
   z-index: 1;
@@ -48,11 +46,11 @@ export const IconDiv = styled.div`
   box-sizing: border-box;
   display: flex;
   position: absolute;
-  width: 15%;
-  height: 27%;
+  width: ${(props: SizePosition) => props.width}%;
+  height: ${(props: SizePosition) => props.height}%;
   margin: 5px auto;
-  top: ${(props: TopIndex) => props.topIndex * 32}%;
-  left: 0%;
+  top: ${(props: SizePosition) => props.top * 32}%;
+  left: ${(props: SizePosition) => props.left}%;
   border: none;
   border-top-left-radius: 40px;
   border-bottom-left-radius: 40px;
@@ -85,11 +83,11 @@ export const formInput = styled.input`
   box-sizing: border-box;
   display: flex;
   position: absolute;
-  width: 85%;
-  height: 27%;
+  width: ${(props: SizePosition) => props.width}%;
+  height: ${(props: SizePosition) => props.height}%;
   margin: 5px auto;
-  top: ${(props: TopIndex) => props.topIndex * 32}%;
-  left: 15%;
+  top: ${(props: SizePosition) => props.top * 32}%;
+  left: ${(props: SizePosition) => props.left}%;
   border: none;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
@@ -130,10 +128,10 @@ export const inputDiv = styled.div`
   text-indent: 500px;
   display: flex;
   position: absolute;
-  width: ${(props: Size) => props.width}%;
-  height: ${(props: Size) => props.height}%;
-  top: ${(props: Size) => props.top}%;
-  left: ${(props: Size) => props.left}%;
+  width: ${(props: SizePosition) => props.width}%;
+  height: ${(props: SizePosition) => props.height}%;
+  top: ${(props: SizePosition) => props.top}%;
+  left: ${(props: SizePosition) => props.left}%;
   align-items: center;
   text-align: left;
   color: white;
@@ -141,10 +139,10 @@ export const inputDiv = styled.div`
 
 export const loginForm = styled.div`
   display: flex;
-  width: ${(props: Size) => props.width}%;
-  height: ${(props: Size) => props.height}%;
-  top: ${(props: Size) => props.top}%;
-  left: ${(props: Size) => props.left}%;
+  width: ${(props: SizePosition) => props.width}%;
+  height: ${(props: SizePosition) => props.height}%;
+  top: ${(props: SizePosition) => props.top}%;
+  left: ${(props: SizePosition) => props.left}%;
   position: absolute;
   box-sizing: border-box;
   background-color: #98adc7;
@@ -161,9 +159,21 @@ export const loginFormShadow = styled.div`
   z-index: -1;
   background-color: #494949;
   opacity: 0.7;
-  filter: blur(50px);
-  width: 36%;
-  height: 75%;
-  top: 36%;
-  left: 33%;
+  filter: blur(50px); //36 75 36 33
+  width: ${(props: SizePosition) => props.width}%;
+  height: ${(props: SizePosition) => props.height}%;
+  top: ${(props: SizePosition) => props.top}%;
+  left: ${(props: SizePosition) => props.left}%;
+`;
+
+export const berLogo = styled.div`
+  width: ${(props: SizePosition) => props.width}px;
+  height: ${(props: SizePosition) => props.height}px;
+  top: ${(props: SizePosition) => props.top}%;
+  left: ${(props: SizePosition) => props.left}%;
+  position: absolute;
+  display: flex;
+  background-image: url("../resource/Ber_Logo.svg");
+  background-size: cover;
+  background-color: black;
 `;
