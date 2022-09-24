@@ -15,6 +15,11 @@ interface IconName {
   Name: string;
 }
 
+interface txtPosition {
+  top: number;
+  left: number;
+}
+
 export const Icons = styled.div`
   display: flex;
   position: absolute;
@@ -22,6 +27,18 @@ export const Icons = styled.div`
   height: 33%;
   top: 33%;
   left: 33%;
+  background-image: url(${(props: IconName) => props.Name});
+  background-size: cover;
+  z-index: 1;
+`;
+
+export const CheckIcons = styled.div`
+  display: flex;
+  position: absolute;
+  width: 33%;
+  height: 33%;
+  top: 33%;
+  left: 600%;
   background-image: url(${(props: IconName) => props.Name});
   background-size: cover;
   z-index: 1;
@@ -46,8 +63,8 @@ export const IconDiv = styled.div`
 
 export const accountTxt = styled.h1`
   width: 19%;
-  top: -1%;
-  left: 3%;
+  top: ${(props: txtPosition) => props.top}%;
+  left: ${(props: txtPosition) => props.left}%;
   display: flex;
   position: absolute;
   font-family: "Noto-Sans";
@@ -86,12 +103,27 @@ export const formInput = styled.input`
   }
 `;
 
-export const infoInput = styled.button`
-  width: 23%;
+export const infoSelect = styled.option`
+  color: #777777;
+  font-family: "Noto-Sans";
+  font-size: 14px;
+`;
+
+export const infoInput = styled.select`
+  width: 30%;
   height: 63%;
   border: none;
   border-radius: 20px;
   margin: 1%;
+  color: black;
+  font-family: "Noto-Sans";
+  font-size: 16px;
+  text-align: center;
+  color: #777777;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const inputDiv = styled.div`
@@ -109,10 +141,10 @@ export const inputDiv = styled.div`
 
 export const loginForm = styled.div`
   display: flex;
-  width: 40%;
-  height: 85%;
-  top: 25%;
-  left: 28%;
+  width: ${(props: Size) => props.width}%;
+  height: ${(props: Size) => props.height}%;
+  top: ${(props: Size) => props.top}%;
+  left: ${(props: Size) => props.left}%;
   position: absolute;
   box-sizing: border-box;
   background-color: #98adc7;

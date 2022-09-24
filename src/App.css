@@ -13,3 +13,11 @@
 body {
   overflow: hidden;
 }
+
+.defaultValue {
+  display: none;
+}
+
+.Select::-webkit-scrollbar-thumb {
+  height: 50px;
+}
