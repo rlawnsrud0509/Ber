@@ -14,7 +14,7 @@ function SignUp() {
         </S.berLogo>
         <S.Letter>Sign Up</S.Letter>
 
-        <S.inputDiv height={31} width={59} top={13} left={21}>
+        <S.inputDiv height={29} width={59} top={13} left={21}>
           <S.accountTxt top={-1} left={3}>
             <br />
             계정 정보
@@ -57,57 +57,67 @@ function SignUp() {
           </S.IconDiv>
         </S.inputDiv>
 
-        <S.inputDiv height={12} width={55} top={58} left={21}>
+        <S.inputDiv height={12} width={55} top={55} left={21}>
           <S.accountTxt top={-65} left={3}>
             <br />
             학생 정보
           </S.accountTxt>
-          <S.infoInput>
-            <S.infoSelect disabled selected className="defaultValue">
-              성별
-            </S.infoSelect>
-            <S.infoSelect>남자</S.infoSelect>
-            <S.infoSelect>여자</S.infoSelect>
-          </S.infoInput>
-          <S.infoInput>
-            <S.infoSelect disabled selected className="defaultValue">
-              학년
-            </S.infoSelect>
-            <S.infoSelect>1학년</S.infoSelect>
-            <S.infoSelect>2학년</S.infoSelect>
-            <S.infoSelect>3학년</S.infoSelect>
-          </S.infoInput>
-          <S.infoInput>
-            <S.infoSelect disabled selected className="defaultValue">
-              반
-            </S.infoSelect>
-            <S.infoSelect>1반</S.infoSelect>
-            <S.infoSelect>2반</S.infoSelect>
-            <S.infoSelect>3반</S.infoSelect>
-            <S.infoSelect>4반</S.infoSelect>
-          </S.infoInput>
-          <S.infoInput>
-            <S.infoSelect disabled selected className="defaultValue">
-              번호
-            </S.infoSelect>
-            <S.infoSelect>1번</S.infoSelect>
-            <S.infoSelect>2번</S.infoSelect>
-            <S.infoSelect>3번</S.infoSelect>
-            <S.infoSelect>4번</S.infoSelect>
-            <S.infoSelect>5번</S.infoSelect>
-            <S.infoSelect>6번</S.infoSelect>
-            <S.infoSelect>7번</S.infoSelect>
-            <S.infoSelect>8번</S.infoSelect>
-            <S.infoSelect>9번</S.infoSelect>
-            <S.infoSelect>10번</S.infoSelect>
-            <S.infoSelect>11번</S.infoSelect>
-            <S.infoSelect>12번</S.infoSelect>
-            <S.infoSelect>13번</S.infoSelect>
-            <S.infoSelect>14번</S.infoSelect>
-            <S.infoSelect>15번</S.infoSelect>
-            <S.infoSelect>16번</S.infoSelect>
-          </S.infoInput>
+          <S.DropBox>
+            성별
+            <S.DropBoxul>
+              <S.DropBoxli>남자</S.DropBoxli>
+              <S.DropBoxli>여자</S.DropBoxli>
+            </S.DropBoxul>
+          </S.DropBox>
+          <S.DropBox>
+            학년
+            <S.DropBoxul>
+              <S.DropBoxli>1학년</S.DropBoxli>
+              <S.DropBoxli>2학년</S.DropBoxli>
+              <S.DropBoxli>3학년</S.DropBoxli>
+            </S.DropBoxul>
+          </S.DropBox>
+          <S.DropBox>
+            반
+            <S.DropBoxul>
+              <S.DropBoxli>1반</S.DropBoxli>
+              <S.DropBoxli>2반</S.DropBoxli>
+              <S.DropBoxli>3반</S.DropBoxli>
+              <S.DropBoxli>4반</S.DropBoxli>
+            </S.DropBoxul>
+          </S.DropBox>
+          <S.DropBox>
+            번호
+            <S.DropBoxul>
+              <S.DropBoxli>1번</S.DropBoxli>
+              <S.DropBoxli>2번</S.DropBoxli>
+              <S.DropBoxli>3번</S.DropBoxli>
+              <S.DropBoxli>4번</S.DropBoxli>
+              <S.DropBoxli>5번</S.DropBoxli>
+              <S.DropBoxli>6번</S.DropBoxli>
+              <S.DropBoxli>7번</S.DropBoxli>
+              <S.DropBoxli>8번</S.DropBoxli>
+              <S.DropBoxli>9번</S.DropBoxli>
+              <S.DropBoxli>10번</S.DropBoxli>
+              <S.DropBoxli>11번</S.DropBoxli>
+              <S.DropBoxli>12번</S.DropBoxli>
+              <S.DropBoxli>13번</S.DropBoxli>
+              <S.DropBoxli>14번</S.DropBoxli>
+              <S.DropBoxli>15번</S.DropBoxli>
+              <S.DropBoxli>16번</S.DropBoxli>
+            </S.DropBoxul>
+          </S.DropBox>
         </S.inputDiv>
+
+        <S.submitButton
+          top={70}
+          left={37}
+          width={21}
+          height={7}
+          type={"submit"}
+        >
+          가입하기
+        </S.submitButton>
       </S.loginForm>
       <S.loginFormShadow
         left={36}

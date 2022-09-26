@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { isPropertySignature } from "typescript";
+import "../App.css";
 
 interface SizePosition {
   width: number;
@@ -34,8 +34,8 @@ export const CheckIcons = styled.div`
   display: flex;
   position: absolute;
   width: 33%;
-  height: 33%;
-  top: 33%;
+  height: 35%;
+  top: 34%;
   left: ${(props: IconName) => props.left}%;
   background-image: url(${(props: IconName) => props.Name});
   background-size: cover;
@@ -124,6 +124,26 @@ export const infoInput = styled.select`
   }
 `;
 
+export const submitButton = styled.button`
+  width: ${(props: SizePosition) => props.width}%;
+  height: ${(props: SizePosition) => props.height}%;
+  top: ${(props: SizePosition) => props.top}%;
+  left: ${(props: SizePosition) => props.left}%;
+  border-radius: 20px;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  display: flex;
+  font-family: "Noto-Sans";
+  font-size: 15px;
+  background-color: white;
+  border: none;
+  color: #777777;
+  :hover {
+    cursor: pointer;
+  }
+`;
+
 export const inputDiv = styled.div`
   text-indent: 500px;
   display: flex;
@@ -172,7 +192,72 @@ export const berLogo = styled.div`
   top: ${(props: SizePosition) => props.top}%;
   left: ${(props: SizePosition) => props.left}%;
   position: absolute;
-  background-image: url("../resource/Ber_Logo.png");
+  background-image: url("../resource/Ber_Logo.svg");
   background-size: cover;
   background-color: aqua;
+`;
+
+export const DropBox = styled.button`
+  position: relative;
+  display: flex;
+  width: 30%;
+  height: 63%;
+  border: none;
+  border-radius: 20px;
+  margin: 1%;
+  background-color: white;
+  font-family: "Noto-Sans";
+  font-size: 16px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #777777;
+  list-style: none;
+
+  :hover {
+    cursor: pointer;
+  }
+`;
+
+export const DropBoxul = styled.ul`
+  border: 1px solid black;
+  position: absolute;
+  list-style: none;
+  width: 55%;
+  height: 170%;
+  top: 110%;
+  overflow: scroll;
+  font-size: 0;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  :hover {
+    cursor: default;
+  }
+`;
+
+export const DropBoxli = styled.li`
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  height: 25%;
+  width: 90%;
+  text-align: center;
+  margin: 2px auto;
+  font-size: 16px;
+  transition-timing-function: ease-out;
+  transition-duration: 0.15s;
+
+  :hover {
+    background-color: #a9bed8;
+    cursor: pointer;
+  }
+
+  :active {
+    transition-duration: 0s;
+    background-color: #cfdcec;
+  }
 `;
