@@ -223,11 +223,14 @@ export const DropBoxul = styled.ul`
   border: 1px solid black;
   position: absolute;
   list-style: none;
-  width: 55%;
+  padding: 0;
+  width: 100%;
   height: 170%;
   top: 110%;
   overflow: scroll;
   font-size: 0;
+  display: flex;
+  flex-direction: column;
 
   ::-webkit-scrollbar {
     display: none;
@@ -244,12 +247,12 @@ export const DropBoxli = styled.li`
   color: black;
   border-radius: 10px;
   height: 25%;
-  width: 90%;
   text-align: center;
   margin: 2px auto;
   font-size: 16px;
   transition-timing-function: ease-out;
   transition-duration: 0.15s;
+  width: 100%;
 
   :hover {
     background-color: #a9bed8;
