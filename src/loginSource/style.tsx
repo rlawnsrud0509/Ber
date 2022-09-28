@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import "../App.css";
 
+//스타일트컴포넌트 props 요소 가져오기 위해 선언
+
 interface SizePosition {
   width: number;
   height: number;
@@ -26,6 +28,8 @@ interface txtPosition {
   left: number;
 }
 
+//메일, 키 같은 아이콘 넣을 div
+
 export const Icons = styled.div`
   display: flex;
   position: absolute;
@@ -38,6 +42,8 @@ export const Icons = styled.div`
   z-index: 1;
 `;
 
+//input태그 오른쪽 끝의 체크 아이콘
+
 export const CheckIcons = styled.div`
   display: flex;
   position: absolute;
@@ -49,6 +55,8 @@ export const CheckIcons = styled.div`
   background-size: cover;
   z-index: 3;
 `;
+
+// 아이콘 div 넣어서 input이랑 연결할 div
 
 export const IconDiv = styled.div`
   box-sizing: border-box;
@@ -67,6 +75,8 @@ export const IconDiv = styled.div`
   background-color: white;
 `;
 
+//계정 정보, 학생 정보
+
 export const accountTxt = styled.h1`
   width: 19%;
   top: ${(props: txtPosition) => props.top}%;
@@ -78,6 +88,7 @@ export const accountTxt = styled.h1`
   font-size: 18px;
 `;
 
+// SIGN UP, LOGIN
 export const Letter = styled.h1`
   font-family: "ULTRA";
   font-style: normal;
@@ -86,6 +97,8 @@ export const Letter = styled.h1`
   line-height: 64px;
   color: white;
 `;
+
+// 아이디, 학교 이메일, 비번 작성할 input태그
 
 export const formInput = styled.input`
   box-sizing: border-box;
@@ -109,29 +122,7 @@ export const formInput = styled.input`
   }
 `;
 
-export const infoSelect = styled.option`
-  color: #777777;
-  font-family: "Noto-Sans";
-  font-size: 14px;
-`;
-
-export const infoInput = styled.select`
-  width: 30%;
-  height: 63%;
-  border: none;
-  border-radius: 20px;
-  margin: 1%;
-  color: black;
-  font-family: "Noto-Sans";
-  font-size: 16px;
-  text-align: center;
-  color: #777777;
-
-  :hover {
-    cursor: pointer;
-  }
-`;
-
+//확인버튼
 export const submitButton = styled.button`
   width: ${(props: SizePosition) => props.width}%;
   height: ${(props: SizePosition) => props.height}%;
@@ -161,7 +152,7 @@ export const submitButton = styled.button`
     background-color: #cfdcec;
   }
 `;
-
+//요소 묶을 div 선언
 export const inputDiv = styled.div`
   text-indent: 500px;
   display: flex;
@@ -175,6 +166,7 @@ export const inputDiv = styled.div`
   color: white;
 `;
 
+//제일 외곽 div선언
 export const loginForm = styled.div`
   display: flex;
   width: ${(props: SizePosition) => props.width}%;
@@ -191,6 +183,7 @@ export const loginForm = styled.div`
   justify-content: center;
 `;
 
+//외곽div 그림자 선언
 export const loginFormShadow = styled.div`
   display: flex;
   position: absolute;
@@ -204,6 +197,7 @@ export const loginFormShadow = styled.div`
   left: ${(props: SizePosition) => props.left}%;
 `;
 
+//로고 담을 div 선언
 export const berLogo = styled.div`
   width: ${(props: Berlogo) => props.width}%;
   height: ${(props: Berlogo) => props.height}%;
@@ -214,6 +208,7 @@ export const berLogo = styled.div`
   background-size: cover;
 `;
 
+//클릭 시 드롭박스 나타나게 할 버튼 선언
 export const DropBox = styled.button`
   position: relative;
   display: flex;
@@ -236,6 +231,7 @@ export const DropBox = styled.button`
   }
 `;
 
+//리스트 형식으로 작성하기 때문에 드롭박스 ul선언
 export const DropBoxul = styled.ul`
   position: absolute;
   list-style: none;
@@ -257,6 +253,7 @@ export const DropBoxul = styled.ul`
   }
 `;
 
+//ul요소 안에 들어갈 리스트 요소 선언
 export const DropBoxli = styled.li`
   /* display: none; */
   border: none;

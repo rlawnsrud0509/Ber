@@ -93,7 +93,6 @@ function SignUp() {
         </S.inputDiv>
 
         <S.inputDiv height={12} width={55} top={55} left={21}>
-          {" "}
           {/*inputDiv로 드롭박스 묶음*/}
           <S.accountTxt top={-65} left={3}>
             <br />
