@@ -13,6 +13,14 @@ interface IconName {
   left: number;
 }
 
+interface Berlogo {
+  width: number;
+  height: number;
+  top: number;
+  left: number;
+  Name: string;
+}
+
 interface txtPosition {
   top: number;
   left: number;
@@ -33,13 +41,13 @@ export const Icons = styled.div`
 export const CheckIcons = styled.div`
   display: flex;
   position: absolute;
-  width: 33%;
+  width: 35%;
   height: 35%;
   top: 34%;
   left: ${(props: IconName) => props.left}%;
   background-image: url(${(props: IconName) => props.Name});
   background-size: cover;
-  z-index: 1;
+  z-index: 3;
 `;
 
 export const IconDiv = styled.div`
@@ -55,7 +63,7 @@ export const IconDiv = styled.div`
   border-top-left-radius: 40px;
   border-bottom-left-radius: 40px;
   font-family: "Noto-Sans";
-  z-index: 1;
+  z-index: 3;
   background-color: white;
 `;
 
@@ -131,16 +139,26 @@ export const submitButton = styled.button`
   left: ${(props: SizePosition) => props.left}%;
   border-radius: 20px;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   position: absolute;
   display: flex;
   font-family: "Noto-Sans";
   font-size: 15px;
+  font-weight: bold;
   background-color: white;
   border: none;
   color: #777777;
+  transition-timing-function: ease-out;
+  transition-duration: 0.15s;
+
   :hover {
+    background-color: #a9bed8;
     cursor: pointer;
+  }
+
+  :active {
+    transition-duration: 0s;
+    background-color: #cfdcec;
   }
 `;
 
@@ -187,14 +205,13 @@ export const loginFormShadow = styled.div`
 `;
 
 export const berLogo = styled.div`
-  width: ${(props: SizePosition) => props.width}%;
-  height: ${(props: SizePosition) => props.height}%;
-  top: ${(props: SizePosition) => props.top}%;
-  left: ${(props: SizePosition) => props.left}%;
+  width: ${(props: Berlogo) => props.width}%;
+  height: ${(props: Berlogo) => props.height}%;
+  top: ${(props: Berlogo) => props.top}%;
+  left: ${(props: Berlogo) => props.left}%;
   position: absolute;
-  background-image: url("../resource/Ber_Logo.svg");
+  background-image: url(${(props: Berlogo) => props.Name});
   background-size: cover;
-  background-color: aqua;
 `;
 
 export const DropBox = styled.button`
@@ -220,7 +237,6 @@ export const DropBox = styled.button`
 `;
 
 export const DropBoxul = styled.ul`
-  border: 1px solid black;
   position: absolute;
   list-style: none;
   padding: 0;
@@ -242,6 +258,7 @@ export const DropBoxul = styled.ul`
 `;
 
 export const DropBoxli = styled.li`
+  /* display: none; */
   border: none;
   background-color: white;
   color: black;
@@ -253,6 +270,7 @@ export const DropBoxli = styled.li`
   transition-timing-function: ease-out;
   transition-duration: 0.15s;
   width: 100%;
+  z-index: 1;
 
   :hover {
     background-color: #a9bed8;

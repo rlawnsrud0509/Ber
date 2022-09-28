@@ -1,17 +1,50 @@
 import "./App.css";
+import { useState } from "react";
 import * as S from "./login/style";
 import Email from "./resource/email.svg";
 import Idcard from "./resource/idcard.svg";
 import Key from "./resource/key.svg";
 import Check from "./resource/Check.svg";
+import BerLogo from "./resource/berlogo.svg";
 
 function SignUp() {
+  const [showDropBox1, SetshowDropBox1] = useState(false);
+  const [showDropBox2, SetshowDropBox2] = useState(false);
+  const [showDropBox3, SetshowDropBox3] = useState(false);
+  const [showDropBox4, SetshowDropBox4] = useState(false);
+
+  function ToggleGenderBox() {
+    SetshowDropBox1(!showDropBox1);
+  }
+  function ToggleGradeBox() {
+    SetshowDropBox2(!showDropBox2);
+  }
+  function ToggleClassBox() {
+    SetshowDropBox3(!showDropBox3);
+  }
+  function ToggleNumberBox() {
+    SetshowDropBox4(!showDropBox4);
+  }
+
+  let [Gender, setGender] = useState("성별");
+  let [Grade, setGrade] = useState("학년");
+  let [Class, setClass] = useState("반");
+  let [Number, setNumber] = useState("번호");
+
+  function SetGender(gender: string) {
+    setGender(gender);
+  }
+
   return (
     <>
       <S.loginForm width={45} height={100} top={20} left={28}>
-        <S.berLogo top={-8} left={13} width={31} height={16}>
-          Ber Logo
-        </S.berLogo>
+        <S.berLogo
+          top={-9}
+          left={10}
+          width={31}
+          height={16}
+          Name={BerLogo}
+        ></S.berLogo>
         <S.Letter>Sign Up</S.Letter>
 
         <S.inputDiv height={29} width={59} top={13} left={21}>
@@ -45,6 +78,7 @@ function SignUp() {
           </S.IconDiv>
 
           <S.formInput
+            type={"password"}
             left={15}
             top={3}
             width={85}
@@ -62,62 +96,202 @@ function SignUp() {
             <br />
             학생 정보
           </S.accountTxt>
-          <S.DropBox>
-            성별
-            <S.DropBoxul>
-              <S.DropBoxli>남자</S.DropBoxli>
-              <S.DropBoxli>여자</S.DropBoxli>
-            </S.DropBoxul>
+          <S.DropBox onClick={ToggleGenderBox}>
+            {Gender}
+            {showDropBox1 && (
+              <S.DropBoxul>
+                <S.DropBoxli onClick={() => setGender("남자")}>
+                  남자
+                </S.DropBoxli>
+                <S.DropBoxli onClick={() => setGender("여자")}>
+                  여자
+                </S.DropBoxli>
+              </S.DropBoxul>
+            )}
           </S.DropBox>
-          <S.DropBox>
-            학년
-            <S.DropBoxul>
-              <S.DropBoxli>1학년</S.DropBoxli>
-              <S.DropBoxli>2학년</S.DropBoxli>
-              <S.DropBoxli>3학년</S.DropBoxli>
-            </S.DropBoxul>
+          <S.DropBox onClick={ToggleGradeBox}>
+            {Grade}
+            {showDropBox2 && (
+              <S.DropBoxul>
+                <S.DropBoxli onClick={() => setGrade("1학년")}>
+                  1학년
+                </S.DropBoxli>
+                <S.DropBoxli onClick={() => setGrade("2학년")}>
+                  2학년
+                </S.DropBoxli>
+                <S.DropBoxli onClick={() => setGrade("3학년")}>
+                  3학년
+                </S.DropBoxli>
+              </S.DropBoxul>
+            )}
           </S.DropBox>
-          <S.DropBox>
-            반
-            <S.DropBoxul>
-              <S.DropBoxli>1반</S.DropBoxli>
-              <S.DropBoxli>2반</S.DropBoxli>
-              <S.DropBoxli>3반</S.DropBoxli>
-              <S.DropBoxli>4반</S.DropBoxli>
-            </S.DropBoxul>
+          <S.DropBox onClick={ToggleClassBox}>
+            {Class}
+            {showDropBox3 && (
+              <S.DropBoxul>
+                <S.DropBoxli
+                  onClick={() => {
+                    setClass("1반");
+                  }}
+                >
+                  1반
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setClass("2반");
+                  }}
+                >
+                  2반
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setClass("3반");
+                  }}
+                >
+                  3반
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setClass("반");
+                  }}
+                >
+                  4반
+                </S.DropBoxli>
+              </S.DropBoxul>
+            )}
           </S.DropBox>
-          <S.DropBox>
-            번호
-            <S.DropBoxul>
-              <S.DropBoxli>1번</S.DropBoxli>
-              <S.DropBoxli>2번</S.DropBoxli>
-              <S.DropBoxli>3번</S.DropBoxli>
-              <S.DropBoxli>4번</S.DropBoxli>
-              <S.DropBoxli>5번</S.DropBoxli>
-              <S.DropBoxli>6번</S.DropBoxli>
-              <S.DropBoxli>7번</S.DropBoxli>
-              <S.DropBoxli>8번</S.DropBoxli>
-              <S.DropBoxli>9번</S.DropBoxli>
-              <S.DropBoxli>10번</S.DropBoxli>
-              <S.DropBoxli>11번</S.DropBoxli>
-              <S.DropBoxli>12번</S.DropBoxli>
-              <S.DropBoxli>13번</S.DropBoxli>
-              <S.DropBoxli>14번</S.DropBoxli>
-              <S.DropBoxli>15번</S.DropBoxli>
-              <S.DropBoxli>16번</S.DropBoxli>
-            </S.DropBoxul>
+          <S.DropBox onClick={ToggleNumberBox}>
+            {Number}
+            {showDropBox4 && (
+              <S.DropBoxul>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("1번");
+                  }}
+                >
+                  1번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("2번");
+                  }}
+                >
+                  2번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("3번");
+                  }}
+                >
+                  3번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("4번");
+                  }}
+                >
+                  4번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("5번");
+                  }}
+                >
+                  5번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("6번");
+                  }}
+                >
+                  6번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("7번");
+                  }}
+                >
+                  7번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("8번");
+                  }}
+                >
+                  8번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("9번");
+                  }}
+                >
+                  9번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("10번");
+                  }}
+                >
+                  10번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("11번");
+                  }}
+                >
+                  11번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("12번");
+                  }}
+                >
+                  12번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("13번");
+                  }}
+                >
+                  13번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("14번");
+                  }}
+                >
+                  14번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("15번");
+                  }}
+                >
+                  15번
+                </S.DropBoxli>
+                <S.DropBoxli
+                  onClick={() => {
+                    setNumber("16번");
+                  }}
+                >
+                  16번
+                </S.DropBoxli>
+              </S.DropBoxul>
+            )}
           </S.DropBox>
         </S.inputDiv>
 
-        <S.submitButton
-          top={70}
-          left={37}
-          width={21}
-          height={7}
-          type={"submit"}
-        >
-          가입하기
-        </S.submitButton>
+        {showDropBox1 || showDropBox2 || showDropBox3 || showDropBox4 || (
+          <S.submitButton
+            top={70}
+            left={38}
+            width={21}
+            height={7}
+            type={"submit"}
+          >
+            가입하기
+          </S.submitButton>
+        )}
       </S.loginForm>
       <S.loginFormShadow
         left={36}
