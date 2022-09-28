@@ -1,5 +1,5 @@
 import "./App.css";
-import * as S from "./login/style";
+import * as S from "./loginSource/style";
 import Email from "./resource/email.svg";
 import Key from "./resource/key.svg";
 import Check from "./resource/Check.svg";

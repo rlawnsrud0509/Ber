@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import * as S from "./login/style";
+import * as S from "./loginSource/style";
 import Email from "./resource/email.svg";
 import Idcard from "./resource/idcard.svg";
 import Key from "./resource/key.svg";
@@ -8,6 +8,7 @@ import Check from "./resource/Check.svg";
 import BerLogo from "./resource/berlogo.svg";
 
 function SignUp() {
+  //버튼 클릭 시 드롭박스 보이게 하는 변수&함수
   const [showDropBox1, SetshowDropBox1] = useState(false);
   const [showDropBox2, SetshowDropBox2] = useState(false);
   const [showDropBox3, SetshowDropBox3] = useState(false);
@@ -26,6 +27,7 @@ function SignUp() {
     SetshowDropBox4(!showDropBox4);
   }
 
+  //드롭박스에서 선택한 값들은 요쪽 state변수에 담김.
   let [Gender, setGender] = useState("성별");
   let [Grade, setGrade] = useState("학년");
   let [Class, setClass] = useState("반");
@@ -48,11 +50,12 @@ function SignUp() {
         <S.Letter>Sign Up</S.Letter>
 
         <S.inputDiv height={29} width={59} top={13} left={21}>
+          {" "}
+          {/*inputDiv로 로그인 정보창 묶음*/}
           <S.accountTxt top={-1} left={3}>
             <br />
             계정 정보
           </S.accountTxt>
-
           <S.formInput
             left={15}
             top={1}
@@ -64,7 +67,6 @@ function SignUp() {
             <S.Icons left={33} Name={Email}></S.Icons>
             <S.CheckIcons left={600} Name={Check}></S.CheckIcons>
           </S.IconDiv>
-
           <S.formInput
             left={15}
             top={2}
@@ -76,7 +78,6 @@ function SignUp() {
             <S.Icons left={33} Name={Idcard}></S.Icons>
             <S.CheckIcons left={600} Name={Check}></S.CheckIcons>
           </S.IconDiv>
-
           <S.formInput
             type={"password"}
             left={15}
@@ -92,6 +93,8 @@ function SignUp() {
         </S.inputDiv>
 
         <S.inputDiv height={12} width={55} top={55} left={21}>
+          {" "}
+          {/*inputDiv로 드롭박스 묶음*/}
           <S.accountTxt top={-65} left={3}>
             <br />
             학생 정보
