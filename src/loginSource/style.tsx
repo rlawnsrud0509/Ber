@@ -37,7 +37,7 @@ export const Icons = styled.div`
   position: absolute;
   width: ${(props: IconName) => props.width}%;
   height: ${(props: IconName) => props.height}%;
-  top: 32%;
+  top: 30%;
   left: ${(props: IconName) => props.left}%;
   background-image: url(${(props: IconName) => props.Name});
   background-size: cover;
@@ -138,7 +138,7 @@ export const submitButton = styled.button`
   position: absolute;
   display: flex;
   font-family: "Noto-Sans";
-  font-size: 15px;
+  font-size: 1vw;
   font-weight: bold;
   background-color: white;
   border: none;
@@ -183,7 +183,6 @@ export const loginForm = styled.div`
   color: black;
   border: none;
   border-radius: 6vw;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   justify-content: center;
 `;
 
@@ -217,7 +216,7 @@ export const DropBox = styled.button`
   position: relative;
   display: flex;
   width: 30%;
-  height: 63%;
+  height: 70%;
   border: none;
   border-radius: 20px;
   margin: 1%;
@@ -241,7 +240,7 @@ export const DropBoxul = styled.ul`
   list-style: none;
   padding: 0;
   width: 100%;
-  height: 100%;
+  height: 165%;
   top: 105%;
   overflow: scroll;
   font-size: 0;
@@ -264,7 +263,7 @@ export const DropBoxli = styled.li`
   background-color: white;
   color: black;
   border-radius: 10px;
-  height: 40%;
+  height: 30%;
   text-align: center;
   margin: 0.1vw auto;
   font-size: 16px;

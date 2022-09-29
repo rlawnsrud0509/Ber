@@ -8,7 +8,7 @@ import BerLogo from "./resource/berlogo.svg";
 function Login() {
   return (
     <>
-      <S.loginForm width={700} height={532} top={20} left={27}>
+      <S.loginForm width={700} height={532} top={22} left={27}>
         <S.berLogo
           width={30}
           height={22}
@@ -43,7 +43,7 @@ function Login() {
           type={"password"}
         ></S.formInput>
         <S.IconDiv left={18} top={1.6} width={7} height={11}>
-          <S.Icons left={33} width={44} height={33} Name={Email}></S.Icons>
+          <S.Icons left={33} width={44} height={33} Name={Key}></S.Icons>
           <S.CheckIcons
             left={860}
             width={43}
@@ -58,13 +58,13 @@ function Login() {
           left={38}
           type={"submit"}
         >
-          로그인하기
+          로그인
         </S.submitButton>
       </S.loginForm>
       <S.loginFormShadow
         left={38}
-        top={27}
-        width={700}
+        top={26}
+        width={550}
         height={532}
       ></S.loginFormShadow>
     </>
