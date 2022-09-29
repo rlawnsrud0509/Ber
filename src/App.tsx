@@ -5,7 +5,8 @@ import SignUp from "./SignUp";
 function App() {
   return (
     <>
-      <Login></Login>
+      <SignUp></SignUp>
+      {/* <Login></Login> */}
     </>
   );
 }

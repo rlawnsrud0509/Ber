@@ -13,6 +13,8 @@ interface SizePosition {
 interface IconName {
   Name: string;
   left: number;
+  width: number;
+  height: number;
 }
 
 interface Berlogo {
@@ -33,8 +35,8 @@ interface txtPosition {
 export const Icons = styled.div`
   display: flex;
   position: absolute;
-  width: 33%;
-  height: 33%;
+  width: ${(props: IconName) => props.width}%;
+  height: ${(props: IconName) => props.height}%;
   top: 33%;
   left: ${(props: IconName) => props.left}%;
   background-image: url(${(props: IconName) => props.Name});
@@ -47,8 +49,8 @@ export const Icons = styled.div`
 export const CheckIcons = styled.div`
   display: flex;
   position: absolute;
-  width: 35%;
-  height: 35%;
+  width: ${(props: IconName) => props.width}%;
+  height: ${(props: IconName) => props.height}%;
   top: 34%;
   left: ${(props: IconName) => props.left}%;
   background-image: url(${(props: IconName) => props.Name});
@@ -90,6 +92,8 @@ export const accountTxt = styled.h1`
 
 // SIGN UP, LOGIN
 export const Letter = styled.h1`
+  position: absolute;
+  top: 3%;
   font-family: "ULTRA";
   font-style: normal;
   font-weight: 400;
@@ -169,8 +173,8 @@ export const inputDiv = styled.div`
 //제일 외곽 div선언
 export const loginForm = styled.div`
   display: flex;
-  width: ${(props: SizePosition) => props.width}%;
-  height: ${(props: SizePosition) => props.height}%;
+  width: ${(props: SizePosition) => props.width}px;
+  height: ${(props: SizePosition) => props.height}px;
   top: ${(props: SizePosition) => props.top}%;
   left: ${(props: SizePosition) => props.left}%;
   position: absolute;
@@ -237,8 +241,8 @@ export const DropBoxul = styled.ul`
   list-style: none;
   padding: 0;
   width: 100%;
-  height: 170%;
-  top: 110%;
+  height: 100%;
+  top: 105%;
   overflow: scroll;
   font-size: 0;
   display: flex;
@@ -260,9 +264,9 @@ export const DropBoxli = styled.li`
   background-color: white;
   color: black;
   border-radius: 10px;
-  height: 25%;
+  height: 40%;
   text-align: center;
-  margin: 2px auto;
+  margin: 0.1vw auto;
   font-size: 16px;
   transition-timing-function: ease-out;
   transition-duration: 0.15s;
