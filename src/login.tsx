@@ -64,8 +64,8 @@ function Login() {
       <S.loginFormShadow
         left={38}
         top={27}
-        width={35}
-        height={70}
+        width={700}
+        height={532}
       ></S.loginFormShadow>
     </>
   );

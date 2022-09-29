@@ -37,7 +37,7 @@ export const Icons = styled.div`
   position: absolute;
   width: ${(props: IconName) => props.width}%;
   height: ${(props: IconName) => props.height}%;
-  top: 33%;
+  top: 32%;
   left: ${(props: IconName) => props.left}%;
   background-image: url(${(props: IconName) => props.Name});
   background-size: cover;
@@ -182,7 +182,7 @@ export const loginForm = styled.div`
   background-color: #98adc7;
   color: black;
   border: none;
-  border-radius: 90px;
+  border-radius: 6vw;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   justify-content: center;
 `;
@@ -195,8 +195,8 @@ export const loginFormShadow = styled.div`
   background-color: #494949;
   opacity: 0.7;
   filter: blur(50px); //36 75 36 33
-  width: ${(props: SizePosition) => props.width}%;
-  height: ${(props: SizePosition) => props.height}%;
+  width: ${(props: SizePosition) => props.width}px;
+  height: ${(props: SizePosition) => props.height}px;
   top: ${(props: SizePosition) => props.top}%;
   left: ${(props: SizePosition) => props.left}%;
 `;

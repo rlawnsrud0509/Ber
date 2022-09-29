@@ -39,20 +39,20 @@ function SignUp() {
 
   return (
     <>
-      <S.loginForm width={700} height={835} top={20} left={26}>
+      <S.loginForm width={700} height={731} top={20} left={26}>
         <S.berLogo
           top={-8}
           left={10}
-          width={33}
+          width={30}
           height={16}
           Name={BerLogo}
         ></S.berLogo>
         <S.Letter>Sign Up</S.Letter>
 
-        <S.inputDiv height={29} width={59} top={10} left={21}>
+        <S.inputDiv height={29} width={59} top={13} left={21}>
           {" "}
           {/*inputDiv로 로그인 정보창 묶음*/}
-          <S.accountTxt top={7} left={3}>
+          <S.accountTxt top={3} left={3}>
             <br />
             계정 정보
           </S.accountTxt>
@@ -68,7 +68,7 @@ function SignUp() {
             <S.CheckIcons
               left={600}
               width={35}
-              height={33}
+              height={38}
               Name={Check}
             ></S.CheckIcons>
           </S.IconDiv>
@@ -80,11 +80,11 @@ function SignUp() {
             placeholder="아이디"
           ></S.formInput>
           <S.IconDiv left={0} top={2} width={15} height={27}>
-            <S.Icons left={25} width={50} height={35} Name={Idcard}></S.Icons>
+            <S.Icons left={25} width={45} height={35} Name={Idcard}></S.Icons>
             <S.CheckIcons
               left={600}
               width={35}
-              height={33}
+              height={38}
               Name={Check}
             ></S.CheckIcons>
           </S.IconDiv>
@@ -97,19 +97,19 @@ function SignUp() {
             placeholder="비밀번호"
           ></S.formInput>
           <S.IconDiv left={0} top={3} width={15} height={27}>
-            <S.Icons left={33} width={37} height={33} Name={Key}></S.Icons>
+            <S.Icons left={33} width={37} height={39} Name={Key}></S.Icons>
             <S.CheckIcons
               left={600}
               width={35}
-              height={33}
+              height={38}
               Name={Check}
             ></S.CheckIcons>
           </S.IconDiv>
         </S.inputDiv>
 
-        <S.inputDiv height={12} width={55} top={49} left={21}>
+        <S.inputDiv height={12} width={55} top={55} left={21}>
           {/*inputDiv로 드롭박스 묶음*/}
-          <S.accountTxt top={-50} left={3}>
+          <S.accountTxt top={-55} left={3}>
             <br />
             학생 정보
           </S.accountTxt>
@@ -300,7 +300,7 @@ function SignUp() {
 
         {showDropBox1 || showDropBox2 || showDropBox3 || showDropBox4 || (
           <S.submitButton
-            top={61}
+            top={69}
             left={38}
             width={21}
             height={7}
@@ -311,10 +311,10 @@ function SignUp() {
         )}
       </S.loginForm>
       <S.loginFormShadow
-        left={36}
-        top={42}
-        width={36}
-        height={73}
+        left={28}
+        top={38}
+        width={700}
+        height={731}
       ></S.loginFormShadow>
     </>
   );
