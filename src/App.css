@@ -10,6 +10,12 @@
   src: url("./fonts/Noto_Sans/NotoSans-Thin.ttf");
 }
 
+@font-face {
+  font-family: "GothicA1";
+  font-weight: 400;
+  src: url("./fonts/Gothic_A1/GothicA1-Regular.ttf");
+}
+
 body {
   overflow: hidden;
 }
@@ -25,5 +31,4 @@ body {
 html {
   display: flex;
   justify-content: center;
-  
 }

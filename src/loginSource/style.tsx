@@ -320,6 +320,9 @@ export const userInfoshadow = styled.div`
 `;
 
 export const userIcon = styled.div`
+  position: absolute;
+  left: 4%;
+  top: 18%;
   height: ${(props: userIcon) => props.height}%;
   width: ${(props: userIcon) => props.width}%;
   background-color: white;
@@ -327,22 +330,65 @@ export const userIcon = styled.div`
   border-radius: 50%;
   background: url(${(props: userIcon) => props.Name});
   background-size: cover;
-  margin-left: 2vw;
 `;
 
 export const userName = styled.div`
   position: absolute;
+  font-family: "GothicA1";
   width: 7%;
-  height: 13%;
-  left: 20%;
-  top: 18%;
-  font-size: 3.2vw;
-  font-weight: bold;
+  height: 16%;
+  left: 25%;
+  top: 20%;
+  font-size: 25px;
   text-align: center;
   color: white;
 `;
 
 export const userGCN = styled.div`
+  display: flex;
+  position: absolute;
+  top: 17%;
+  left: 35%;
   width: 10%;
   height: 16%;
+  background-color: white;
+  border: none;
+  border-radius: 1.3vw;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "GothicA1";
+  padding-left: 1vw;
+  align-items: center;
+`;
+
+export const statusMessage = styled.div`
+  display: flex;
+  position: absolute;
+  left: 25%;
+  top: 45%;
+  width: 30%;
+  height: 30%;
+  background-color: white;
+  border-radius: 3vw;
+  font-family: "GothicA1";
+  font-size: 15px;
+  font-weight: 600;
+  white-space: pre-wrap;
+  text-align: center;
+  align-items: center;
+  padding-left: 50px;
+
+  ::after {
+    content: "";
+    position: absolute;
+    border-left: 12px solid transparent;
+    border-right: 12px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+
+    left: -20px;
+    bottom: 22px;
+  }
+
+  filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.25));
 `;
