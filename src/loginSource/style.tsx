@@ -1,3 +1,4 @@
+import { icons } from "react-icons";
 import styled from "styled-components";
 import "../App.css";
 
@@ -8,6 +9,12 @@ interface SizePosition {
   height: number;
   top: number;
   left: number;
+}
+
+interface userIcon {
+  Name: string;
+  width: number;
+  height: number;
 }
 
 interface IconName {
@@ -283,7 +290,11 @@ export const DropBoxli = styled.li`
   }
 `;
 
+//-----------------------------마이페이지--------------------------------
+
 export const userInfo = styled.div`
+  justify-content: center;
+  display: flex;
   position: absolute;
   top: 20%;
   left: 16%;
@@ -293,6 +304,7 @@ export const userInfo = styled.div`
   border: none;
   border-radius: 2.5vw;
   z-index: 1;
+  flex-direction: column;
 `;
 
 export const userInfoshadow = styled.div`
@@ -306,4 +318,31 @@ export const userInfoshadow = styled.div`
   border: none;
   border-radius: 2.5vw;
 `;
-export const userIcon = styled.div``;
+
+export const userIcon = styled.div`
+  height: ${(props: userIcon) => props.height}%;
+  width: ${(props: userIcon) => props.width}%;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  background: url(${(props: userIcon) => props.Name});
+  background-size: cover;
+  margin-left: 2vw;
+`;
+
+export const userName = styled.div`
+  position: absolute;
+  width: 7%;
+  height: 13%;
+  left: 20%;
+  top: 18%;
+  font-size: 3.2vw;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+`;
+
+export const userGCN = styled.div`
+  width: 10%;
+  height: 16%;
+`;
