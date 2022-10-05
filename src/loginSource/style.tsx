@@ -282,3 +282,28 @@ export const DropBoxli = styled.li`
     background-color: #cfdcec;
   }
 `;
+
+export const userInfo = styled.div`
+  position: absolute;
+  top: 20%;
+  left: 16%;
+  width: 1064px;
+  height: 231px;
+  background-color: #98adc7;
+  border: none;
+  border-radius: 2.5vw;
+  z-index: 1;
+`;
+
+export const userInfoshadow = styled.div`
+  position: absolute;
+  filter: blur(1vw);
+  top: 25%;
+  left: 18%;
+  width: 1040px;
+  height: 200px;
+  background-color: #777777;
+  border: none;
+  border-radius: 2.5vw;
+`;
+export const userIcon = styled.div``;
