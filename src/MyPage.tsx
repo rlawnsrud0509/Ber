@@ -5,22 +5,18 @@ import GithubWhite from "./resource/GithubWhite.svg";
 import Smile from "./resource/Smile.svg";
 import postIcon from "./resource/postIcon.svg";
 
-import { useState } from "react";
+import ReturnPost from "./returnPost";
 
 import userData from "./data.json";
 
 function MyPage() {
   let userInterests = null;
-  let [userPost, setUserPost] = useState(null);
+  let userPost: any = "";
 
   if (Object.keys(userData.user1.interests).length > 0) {
     userInterests = userData.user1.interests.map(function (interest: String) {
       return <S.interests>{interest}</S.interests>;
     });
-  }
-
-  for (let i = 0; i < Object.keys(userData.user1.posts.post1).length; i++) {
-    setUserPost((userPost = userData.user1.posts.post1[i]));
   }
 
   return (
@@ -81,7 +77,9 @@ function MyPage() {
       )}
 
       {Object.keys(userData.user1.posts).length > 0 && (
-        <S.myPostDiv>{userPost}</S.myPostDiv>
+        <S.myPostDiv>
+          <ReturnPost id={1}></ReturnPost>
+        </S.myPostDiv>
       )}
       {Object.keys(userData.user1.posts).length < 1 && (
         <S.myPostDiv>
