@@ -16,8 +16,10 @@
   src: url("./fonts/Gothic_A1/GothicA1-Regular.ttf");
 }
 
-body {
-  overflow: hidden;
+@font-face {
+  font-family: "ROBOTO";
+  font-weight: 600;
+  src: url("./fonts/Roboto/Roboto-Regular.ttf");
 }
 
 .defaultValue {

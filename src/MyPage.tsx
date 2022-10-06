@@ -3,8 +3,26 @@ import userLogo from "./resource/userIcon.svg";
 import EmailWhite from "./resource/EmailWhite.svg";
 import GithubWhite from "./resource/GithubWhite.svg";
 import Smile from "./resource/Smile.svg";
+import postIcon from "./resource/postIcon.svg";
+
+import { useState } from "react";
+
+import userData from "./data.json";
 
 function MyPage() {
+  let userInterests = null;
+  let [userPost, setUserPost] = useState(null);
+
+  if (Object.keys(userData.user1.interests).length > 0) {
+    userInterests = userData.user1.interests.map(function (interest: String) {
+      return <S.interests>{interest}</S.interests>;
+    });
+  }
+
+  for (let i = 0; i < Object.keys(userData.user1.posts.post1).length; i++) {
+    setUserPost((userPost = userData.user1.posts.post1[i]));
+  }
+
   return (
     <>
       <S.userInfo>
@@ -15,11 +33,14 @@ function MyPage() {
           height={66}
           Name={userLogo}
         ></S.userIcon>
-        <S.userName>이하린</S.userName>
-        <S.userGCN>1학년 4반 14번</S.userGCN>
-        <S.statusMessage>
-          사이드 프로젝트 팀원 구하고 있습니다!{"\n"} 상단 게시글 참고해주세요
-        </S.statusMessage>
+        <S.userName>
+          <b>{userData.user1.name}</b>
+        </S.userName>
+        <S.userGCN>
+          {userData.user1.grade}학년 {userData.user1.class}반{" "}
+          {userData.user1.studentNumber}번
+        </S.userGCN>
+        <S.statusMessage>{userData.user1.statusMessage}</S.statusMessage>
         <S.linkIcon
           top={18}
           left={47}
@@ -35,20 +56,38 @@ function MyPage() {
           Name={EmailWhite}
         ></S.linkIcon>
         <S.divLine></S.divLine>
-        {
-          //여기 스마일넣어야댐
-        }
         <S.interestDiv>
-          <S.interests>ㄹㅈㄹㅈ</S.interests>
-          <S.interests>ffㅈㅈㄹㄹ</S.interests>
-          <S.interests>ㄹ</S.interests>
-          <S.interests>ㄹ</S.interests>
-          <S.interests>ㄹfwewfwef</S.interests>
-          <S.interests>ffffffㄹ</S.interests>
-          <S.interests>wefwefewfㄹ</S.interests>
+          {Object.keys(userData.user1.interests).length < 1 && (
+            <S.noInterests>나를 표현할 멋진 태그를 설정해보세요</S.noInterests>
+          )}
+          {userInterests}
         </S.interestDiv>
+        <S.Smile
+          top={18}
+          left={67}
+          width={3.1}
+          height={15}
+          Name={Smile}
+        ></S.Smile>
+        <S.tagText>
+          <b>{userData.user1.name}</b>님은 이런 것들에 관심 있어요!
+        </S.tagText>
       </S.userInfo>
       <S.userInfoshadow></S.userInfoshadow>
+      {Object.keys(userData.user1.posts).length > 0 && (
+        <S.postText top={60} left={20} width={5.5} height={3} Name={postIcon}>
+          게시글
+        </S.postText>
+      )}
+
+      {Object.keys(userData.user1.posts).length > 0 && (
+        <S.myPostDiv>{userPost}</S.myPostDiv>
+      )}
+      {Object.keys(userData.user1.posts).length < 1 && (
+        <S.myPostDiv>
+          게시글이 없네요.{"\n"}친구들과 멋진 글을 공유해보세요!
+        </S.myPostDiv>
+      )}
     </>
   );
 }

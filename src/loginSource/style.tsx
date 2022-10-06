@@ -1,4 +1,3 @@
-import { icons } from "react-icons";
 import styled from "styled-components";
 import "../App.css";
 
@@ -358,31 +357,32 @@ export const userGCN = styled.div`
 export const statusMessage = styled.div`
   display: flex;
   position: absolute;
-  left: 23%;
+  left: 22%;
   top: 45%;
-  width: 30%;
+  width: 25%;
   height: 30%;
   background-color: white;
+  color: #676767;
   border-radius: 3vw;
   font-family: "GothicA1";
   font-size: 15px;
   font-weight: 600;
   white-space: pre-wrap;
-  text-align: center;
+  text-align: left;
   align-items: center;
-  padding-left: 50px;
+  padding: 0 4%;
 
-  /* ::after {
+  ::after {
     content: "";
     position: absolute;
     border-left: 12px solid transparent;
     border-right: 12px solid white;
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
 
     left: -20px;
     bottom: 22px;
-  } */
+  }
 
   filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.25));
 `;
@@ -434,3 +434,83 @@ export const interests = styled.div`
   font-weight: 600;
   border-radius: 10vw;
 `;
+
+export const noInterests = styled.div`
+  position: absolute;
+  top: 70%;
+  color: #676767;
+  font-family: "GothicA1";
+  font-weight: 600;
+  font-size: 18px;
+  margin: auto;
+  line-height: 80px;
+`;
+
+export const Smile = styled.div`
+  position: absolute;
+  top: ${(props: Berlogo) => props.top}%;
+  left: ${(props: Berlogo) => props.left}%; //20
+  width: ${(props: Berlogo) => props.width}%; //20
+  height: ${(props: Berlogo) => props.height}%; //20
+  background: url(${(props: Berlogo) => props.Name});
+  background-size: cover;
+`;
+
+export const tagText = styled.div`
+  position: absolute;
+  top: 21.5%;
+  left: 71%;
+  font-family: "GothicA1";
+  font-weight: 500;
+  font-size: 17px;
+  color: white;
+`;
+
+export const postText = styled.div`
+  display: flex;
+  position: absolute;
+  color: black;
+  font-family: "ROBOTO";
+  font-weight: 600;
+  font-size: 19px;
+  text-align: center;
+  justify-content: left;
+  top: ${(props: Berlogo) => props.top}%;
+  left: ${(props: Berlogo) => props.left}%;
+  width: ${(props: Berlogo) => props.width}%; //5
+  height: ${(props: Berlogo) => props.height}%; //9
+  background: url(${(props: Berlogo) => props.Name});
+  background-repeat: no-repeat;
+  background-color: #d6dee9;
+  background-position: 13% center;
+  padding: 15px 18px;
+  justify-content: right;
+  align-items: center;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+`;
+
+export const myPostDiv = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 67%;
+  width: 1064px;
+  left: 16%;
+  border: none;
+`;
+
+export const myPost = styled.div`
+  background-color: #d6dee9;
+  border-radius: 50px;
+  width: 100%;
+  height: 319px;
+  font-family: "GothicA1";
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 40px;
+`;
+
+export const postTitle = styled.div``;
+
+export const postSummary = styled.div``;
