@@ -11,12 +11,6 @@ interface SizePosition {
   left: number;
 }
 
-interface userIcon {
-  Name: string;
-  width: number;
-  height: number;
-}
-
 interface IconName {
   Name: string;
   left: number;
@@ -42,10 +36,10 @@ interface txtPosition {
 export const Icons = styled.div`
   display: flex;
   position: absolute;
-  width: ${(props: IconName) => props.width}%;
-  height: ${(props: IconName) => props.height}%;
   top: 30%;
   left: ${(props: IconName) => props.left}%;
+  width: ${(props: IconName) => props.width}%;
+  height: ${(props: IconName) => props.height}%;
   background-image: url(${(props: IconName) => props.Name});
   background-size: cover;
   z-index: 1;
@@ -56,10 +50,10 @@ export const Icons = styled.div`
 export const CheckIcons = styled.div`
   display: flex;
   position: absolute;
-  width: ${(props: IconName) => props.width}%;
-  height: ${(props: IconName) => props.height}%;
   top: 34%;
   left: ${(props: IconName) => props.left}%;
+  width: ${(props: IconName) => props.width}%;
+  height: ${(props: IconName) => props.height}%;
   background-image: url(${(props: IconName) => props.Name});
   background-size: cover;
   z-index: 3;
@@ -71,11 +65,11 @@ export const IconDiv = styled.div`
   box-sizing: border-box;
   display: flex;
   position: absolute;
+  top: ${(props: SizePosition) => props.top * 32}%;
+  left: ${(props: SizePosition) => props.left}%;
   width: ${(props: SizePosition) => props.width}%;
   height: ${(props: SizePosition) => props.height}%;
   margin: 5px auto;
-  top: ${(props: SizePosition) => props.top * 32}%;
-  left: ${(props: SizePosition) => props.left}%;
   border: none;
   border-top-left-radius: 40px;
   border-bottom-left-radius: 40px;
@@ -115,11 +109,11 @@ export const formInput = styled.input`
   box-sizing: border-box;
   display: flex;
   position: absolute;
-  width: ${(props: SizePosition) => props.width}%;
-  height: ${(props: SizePosition) => props.height}%;
   margin: 5px auto;
   top: ${(props: SizePosition) => props.top * 32}%;
   left: ${(props: SizePosition) => props.left}%;
+  width: ${(props: SizePosition) => props.width}%;
+  height: ${(props: SizePosition) => props.height}%;
   border: none;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
@@ -135,10 +129,10 @@ export const formInput = styled.input`
 
 //확인버튼
 export const submitButton = styled.button`
-  width: ${(props: SizePosition) => props.width}%;
-  height: ${(props: SizePosition) => props.height}%;
   top: ${(props: SizePosition) => props.top}%;
   left: ${(props: SizePosition) => props.left}%;
+  width: ${(props: SizePosition) => props.width}%;
+  height: ${(props: SizePosition) => props.height}%;
   border-radius: 20px;
   align-items: center;
   justify-content: center;
@@ -168,10 +162,10 @@ export const inputDiv = styled.div`
   text-indent: 500px;
   display: flex;
   position: absolute;
-  width: ${(props: SizePosition) => props.width}%;
-  height: ${(props: SizePosition) => props.height}%;
   top: ${(props: SizePosition) => props.top}%;
   left: ${(props: SizePosition) => props.left}%;
+  width: ${(props: SizePosition) => props.width}%;
+  height: ${(props: SizePosition) => props.height}%;
   align-items: center;
   text-align: left;
   color: white;
@@ -180,10 +174,10 @@ export const inputDiv = styled.div`
 //제일 외곽 div선언
 export const loginForm = styled.div`
   display: flex;
-  width: ${(props: SizePosition) => props.width}px;
-  height: ${(props: SizePosition) => props.height}px;
   top: ${(props: SizePosition) => props.top}%;
   left: ${(props: SizePosition) => props.left}%;
+  width: ${(props: SizePosition) => props.width}px;
+  height: ${(props: SizePosition) => props.height}px;
   position: absolute;
   box-sizing: border-box;
   background-color: #98adc7;
@@ -201,18 +195,18 @@ export const loginFormShadow = styled.div`
   background-color: #494949;
   opacity: 0.7;
   filter: blur(50px); //36 75 36 33
-  width: ${(props: SizePosition) => props.width}px;
-  height: ${(props: SizePosition) => props.height}px;
   top: ${(props: SizePosition) => props.top}%;
   left: ${(props: SizePosition) => props.left}%;
+  width: ${(props: SizePosition) => props.width}px;
+  height: ${(props: SizePosition) => props.height}px;
 `;
 
 //로고 담을 div 선언
 export const berLogo = styled.div`
-  width: ${(props: Berlogo) => props.width}%;
-  height: ${(props: Berlogo) => props.height}%;
   top: ${(props: Berlogo) => props.top}%;
   left: ${(props: Berlogo) => props.left}%;
+  width: ${(props: Berlogo) => props.width}%;
+  height: ${(props: Berlogo) => props.height}%;
   position: absolute;
   background-image: url(${(props: Berlogo) => props.Name});
   background-size: cover;
@@ -321,14 +315,14 @@ export const userInfoshadow = styled.div`
 
 export const userIcon = styled.div`
   position: absolute;
-  left: 4%;
-  top: 18%;
-  height: ${(props: userIcon) => props.height}%;
-  width: ${(props: userIcon) => props.width}%;
+  top: ${(props: Berlogo) => props.top}%;
+  left: ${(props: Berlogo) => props.left}%;
+  width: ${(props: Berlogo) => props.width}%;
+  height: ${(props: Berlogo) => props.height}%;
   background-color: white;
   border: none;
   border-radius: 50%;
-  background: url(${(props: userIcon) => props.Name});
+  background: url(${(props: Berlogo) => props.Name});
   background-size: cover;
 `;
 
@@ -337,7 +331,7 @@ export const userName = styled.div`
   font-family: "GothicA1";
   width: 7%;
   height: 16%;
-  left: 25%;
+  left: 23%;
   top: 20%;
   font-size: 25px;
   text-align: center;
@@ -348,7 +342,7 @@ export const userGCN = styled.div`
   display: flex;
   position: absolute;
   top: 17%;
-  left: 35%;
+  left: 32%;
   width: 10%;
   height: 16%;
   background-color: white;
@@ -364,7 +358,7 @@ export const userGCN = styled.div`
 export const statusMessage = styled.div`
   display: flex;
   position: absolute;
-  left: 25%;
+  left: 23%;
   top: 45%;
   width: 30%;
   height: 30%;
@@ -378,7 +372,7 @@ export const statusMessage = styled.div`
   align-items: center;
   padding-left: 50px;
 
-  ::after {
+  /* ::after {
     content: "";
     position: absolute;
     border-left: 12px solid transparent;
@@ -388,7 +382,55 @@ export const statusMessage = styled.div`
 
     left: -20px;
     bottom: 22px;
-  }
+  } */
 
   filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.25));
+`;
+
+export const linkIcon = styled.button`
+  position: absolute;
+  top: ${(props: Berlogo) => props.top}%; //20
+  left: ${(props: Berlogo) => props.left}%; //45
+  width: ${(props: Berlogo) => props.width}%; //2
+  height: ${(props: Berlogo) => props.height}%; //9
+  background: url(${(props: Berlogo) => props.Name});
+  background-position: center bottom;
+  border: 3px solid white;
+  border-radius: 50%;
+
+  :hover {
+    cursor: pointer;
+  }
+`;
+
+export const divLine = styled.div`
+  position: absolute;
+  left: 62%;
+  width: 0%;
+  height: 72%;
+  border: 2px solid #e0e0e0;
+  background-color: #e0e0e0;
+  border-radius: 10vw;
+`;
+
+export const interestDiv = styled.div`
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  left: 67%;
+  top: 40%;
+  width: 29%;
+  height: 48;
+  flex-direction: row;
+`;
+
+export const interests = styled.div`
+  padding: 11px 15px;
+  background-color: white;
+  border: none;
+  margin: 4px;
+  font-family: "GothicA1";
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 10vw;
 `;
