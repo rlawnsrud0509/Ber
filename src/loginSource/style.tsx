@@ -511,6 +511,10 @@ export const myPost = styled.div`
   margin-bottom: 40px;
 `;
 
-export const postTitle = styled.div``;
+export const postTitle = styled.div`
+  position: absolute;
+  width: 30%;
+  height: 20%;
+`;
 
 export const postSummary = styled.div``;
