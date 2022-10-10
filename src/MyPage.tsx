@@ -13,12 +13,11 @@ function MyPage() {
   let userInterests = null;
   let userPost: any = "";
 
-  if (Object.keys(userData.user1.interests).length > 0) {
-    userInterests = userData.user1.interests.map(function (interest: String) {
-      return <S.interests>{interest}</S.interests>;
-    });
+  function MakePost () {
+    for(let i=0; i<Object.keys(userData.user1.posts).length; i++) {
+      userData.user1.posts[i]
+    }
   }
-
   return (
     <>
       <S.userInfo>
@@ -77,9 +76,7 @@ function MyPage() {
       )}
 
       {Object.keys(userData.user1.posts).length > 0 && (
-        <S.myPostDiv>
-          <ReturnPost id={1}></ReturnPost>
-        </S.myPostDiv>
+        
       )}
       {Object.keys(userData.user1.posts).length < 1 && (
         <S.myPostDiv>
