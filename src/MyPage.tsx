@@ -4,20 +4,95 @@ import EmailWhite from "./resource/EmailWhite.svg";
 import GithubWhite from "./resource/GithubWhite.svg";
 import Smile from "./resource/Smile.svg";
 import postIcon from "./resource/postIcon.svg";
-
-import ReturnPost from "./returnPost";
+import heart from "./resource/heart.svg";
+import messege from "./resource/messege.svg";
 
 import userData from "./data.json";
 
 function MyPage() {
   let userInterests = null;
-  let userPost: any = "";
+  let postInterests: any = null;
+  let userPost = null;
 
-  function MakePost () {
-    for(let i=0; i<Object.keys(userData.user1.posts).length; i++) {
-      userData.user1.posts[i]
-    }
+  //유저 태그
+  if (Object.keys(userData.user1.interests).length > 0) {
+    userInterests = userData.user1.interests.map(function (interest: String) {
+      return <S.interests>{interest}</S.interests>;
+    });
   }
+
+  //게시글 태그
+  if (Object.keys(userData.user1.posts).length > 0) {
+    postInterests = userData.user1.posts.map((post) => {
+      post.tags.map((tag) => {
+        return <S.postTag>{tag}</S.postTag>;
+      });
+    });
+  }
+
+  //게시글 생성
+  userPost = userData.user1.posts.map((post) => {
+    //게시글 태그 생성
+    postInterests = post.tags.map((tag) => {
+      return <S.postTag>{tag}</S.postTag>;
+    });
+
+    if (post.id === 1) {
+      return (
+        <S.myPost>
+          <S.postImg
+            width={28}
+            height={62}
+            top={14}
+            left={6}
+            Name={post.img}
+          ></S.postImg>
+          <S.postTitle>{post.title}</S.postTitle>
+          <S.postSummary>{post.summary}</S.postSummary>
+          <S.postIconDiv>
+            <S.postIcon
+              top={0}
+              left={0}
+              width={11.3}
+              height={100}
+              Name={heart}
+            ></S.postIcon>
+            &ensp;&ensp;&ensp;
+            {post.heart}
+            <S.postIcon
+              top={0}
+              left={30}
+              width={11.3}
+              height={100}
+              Name={messege}
+            ></S.postIcon>
+            &ensp;&ensp;&ensp;&ensp;&ensp;
+            {post.chat}
+          </S.postIconDiv>
+          <S.postTagDiv>{postInterests}</S.postTagDiv>
+        </S.myPost>
+      );
+    }
+    // if (post.id === 2) {
+    //   return (
+    //     <S.myPost>
+    //       <S.postTitle>{post.title}</S.postTitle>
+    //       <S.postSummary>{post.summary}</S.postSummary>
+    //     </S.myPost>
+    //   );
+    // }
+  });
+  // for (let i = 0; i < Object.keys(userData.user1.posts).length; i++) {
+  //   if ((userInterests = userData.user1.posts[i].id === i)) {
+  //     userPost[i] = (
+  //       <S.myPost>
+  //         <S.postSummary></S.postSummary>
+  //         <S.postIcon></S.postIcon>
+  //         <S.postTag></S.postTag>
+  //       </S.myPost>
+  //     );
+  //   }
+  // }
   return (
     <>
       <S.userInfo>
@@ -76,7 +151,7 @@ function MyPage() {
       )}
 
       {Object.keys(userData.user1.posts).length > 0 && (
-        
+        <S.myPostDiv>{userPost}</S.myPostDiv>
       )}
       {Object.keys(userData.user1.posts).length < 1 && (
         <S.myPostDiv>

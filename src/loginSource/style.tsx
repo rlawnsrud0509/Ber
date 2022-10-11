@@ -513,8 +513,77 @@ export const myPost = styled.div`
 
 export const postTitle = styled.div`
   position: absolute;
-  width: 30%;
-  height: 20%;
+  left: 40%;
+  width: 31%;
+  top: 18%;
+  font-family: "GothicA1";
+  font-weight: 600;
+  font-size: 24px;
 `;
 
-export const postSummary = styled.div``;
+export const postSummary = styled.div`
+  position: absolute;
+  left: 40%;
+  top: 33%;
+  width: 51%;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+export const postIconDiv = styled.div`
+  text-align: left;
+  align-items: baseline;
+  font-size: "ROBOTO";
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  position: absolute;
+  width: 18%;
+  height: 6%;
+  top: 51%;
+  left: 40%;
+`;
+
+export const postIcon = styled.div`
+  position: absolute;
+  top: ${(props: Berlogo) => props.top}%;
+  left: ${(props: Berlogo) => props.left}%;
+  width: ${(props: Berlogo) => props.width}%;
+  height: ${(props: Berlogo) => props.height}%;
+  background: url(${(props: Berlogo) => props.Name});
+  background-size: cover;
+  text-align: right;
+`;
+
+export const postTagDiv = styled.div`
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  top: 61%;
+  left: 39.5%;
+  width: 37%;
+  height: 9%;
+`;
+
+export const postTag = styled.div`
+  display: inline;
+  padding: 11px 15px;
+  background-color: white;
+  border: none;
+  margin: 4px;
+  font-family: "GothicA1";
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 10vw;
+`;
+
+export const postImg = styled.div`
+  position: absolute;
+  top: ${(props: Berlogo) => props.top}%;
+  left: ${(props: Berlogo) => props.left}%;
+  width: ${(props: Berlogo) => props.width}%;
+  height: ${(props: Berlogo) => props.height}%;
+  background: url(${(props: Berlogo) => props.Name});
+  background-size: cover;
+  background-color: black;
+`;
