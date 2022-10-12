@@ -6,6 +6,8 @@ import Smile from "./resource/Smile.svg";
 import postIcon from "./resource/postIcon.svg";
 import heart from "./resource/heart.svg";
 import messege from "./resource/messege.svg";
+import postImg1 from "./resource/postImg1.svg";
+import postImg2 from "./resource/postImg2.svg";
 
 import userData from "./data.json";
 
@@ -37,15 +39,15 @@ function MyPage() {
       return <S.postTag>{tag}</S.postTag>;
     });
 
-    if (post.id === 1) {
-      return (
+    if (post.id) {
+      const post1 = (
         <S.myPost>
           <S.postImg
             width={28}
             height={62}
             top={14}
             left={6}
-            Name={post.img}
+            Name={postImg1}
           ></S.postImg>
           <S.postTitle>{post.title}</S.postTitle>
           <S.postSummary>{post.summary}</S.postSummary>
@@ -72,15 +74,48 @@ function MyPage() {
           <S.postTagDiv>{postInterests}</S.postTagDiv>
         </S.myPost>
       );
+
+      const post2 = (
+        <S.myPost>
+          <S.postImg
+            width={28}
+            height={62}
+            top={14}
+            left={6}
+            Name={postImg1}
+          ></S.postImg>
+          <S.postTitle>{post.title}</S.postTitle>
+          <S.postSummary>{post.summary}</S.postSummary>
+          <S.postIconDiv>
+            <S.postIcon
+              top={0}
+              left={0}
+              width={11.3}
+              height={100}
+              Name={heart}
+            ></S.postIcon>
+            &ensp;&ensp;&ensp;
+            {post.heart}
+            <S.postIcon
+              top={0}
+              left={30}
+              width={11.3}
+              height={100}
+              Name={messege}
+            ></S.postIcon>
+            &ensp;&ensp;&ensp;&ensp;&ensp;
+            {post.chat}
+          </S.postIconDiv>
+          <S.postTagDiv>{postInterests}</S.postTagDiv>
+        </S.myPost>
+      );
+      return (
+        <S.myPostDiv>
+          {post1}
+          {post2}
+        </S.myPostDiv>
+      );
     }
-    // if (post.id === 2) {
-    //   return (
-    //     <S.myPost>
-    //       <S.postTitle>{post.title}</S.postTitle>
-    //       <S.postSummary>{post.summary}</S.postSummary>
-    //     </S.myPost>
-    //   );
-    // }
   });
   // for (let i = 0; i < Object.keys(userData.user1.posts).length; i++) {
   //   if ((userInterests = userData.user1.posts[i].id === i)) {
@@ -151,7 +186,7 @@ function MyPage() {
       )}
 
       {Object.keys(userData.user1.posts).length > 0 && (
-        <S.myPostDiv>{userPost}</S.myPostDiv>
+        <S.myPostDiv>{userPost[0]}</S.myPostDiv>
       )}
       {Object.keys(userData.user1.posts).length < 1 && (
         <S.myPostDiv>

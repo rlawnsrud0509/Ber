@@ -585,5 +585,4 @@ export const postImg = styled.div`
   height: ${(props: Berlogo) => props.height}%;
   background: url(${(props: Berlogo) => props.Name});
   background-size: cover;
-  background-color: black;
 `;
