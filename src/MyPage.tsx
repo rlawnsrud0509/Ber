@@ -14,7 +14,8 @@ import userData from "./data.json";
 function MyPage() {
   let userInterests = null;
   let postInterests: any = null;
-  let userPost = null;
+  let userPost: any = [];
+  let postTag: any = [];
 
   //유저 태그
   if (Object.keys(userData.user1.interests).length > 0) {
@@ -26,108 +27,29 @@ function MyPage() {
   //게시글 태그
   if (Object.keys(userData.user1.posts).length > 0) {
     postInterests = userData.user1.posts.map((post) => {
+      console.log("포스트 map 값 : ", post);
       post.tags.map((tag) => {
+        console.log("게시글태그 값 : ", tag);
         return <S.postTag>{tag}</S.postTag>;
       });
     });
   }
 
-  //게시글 생성
+  console.log(postInterests);
+
   userPost = userData.user1.posts.map((post) => {
-    //게시글 태그 생성
-    postInterests = post.tags.map((tag) => {
-      return <S.postTag>{tag}</S.postTag>;
-    });
-
-    if (post.id) {
-      const post1 = (
-        <S.myPost>
-          <S.postImg
-            width={28}
-            height={62}
-            top={14}
-            left={6}
-            Name={postImg1}
-          ></S.postImg>
+    return (
+      <S.myPost>
+        <img src={postImg1} alt="" />
+        <S.postTextDiv>
           <S.postTitle>{post.title}</S.postTitle>
           <S.postSummary>{post.summary}</S.postSummary>
-          <S.postIconDiv>
-            <S.postIcon
-              top={0}
-              left={0}
-              width={11.3}
-              height={100}
-              Name={heart}
-            ></S.postIcon>
-            &ensp;&ensp;&ensp;
-            {post.heart}
-            <S.postIcon
-              top={0}
-              left={30}
-              width={11.3}
-              height={100}
-              Name={messege}
-            ></S.postIcon>
-            &ensp;&ensp;&ensp;&ensp;&ensp;
-            {post.chat}
-          </S.postIconDiv>
           <S.postTagDiv>{postInterests}</S.postTagDiv>
-        </S.myPost>
-      );
-
-      const post2 = (
-        <S.myPost>
-          <S.postImg
-            width={28}
-            height={62}
-            top={14}
-            left={6}
-            Name={postImg1}
-          ></S.postImg>
-          <S.postTitle>{post.title}</S.postTitle>
-          <S.postSummary>{post.summary}</S.postSummary>
-          <S.postIconDiv>
-            <S.postIcon
-              top={0}
-              left={0}
-              width={11.3}
-              height={100}
-              Name={heart}
-            ></S.postIcon>
-            &ensp;&ensp;&ensp;
-            {post.heart}
-            <S.postIcon
-              top={0}
-              left={30}
-              width={11.3}
-              height={100}
-              Name={messege}
-            ></S.postIcon>
-            &ensp;&ensp;&ensp;&ensp;&ensp;
-            {post.chat}
-          </S.postIconDiv>
-          <S.postTagDiv>{postInterests}</S.postTagDiv>
-        </S.myPost>
-      );
-      return (
-        <S.myPostDiv>
-          {post1}
-          {post2}
-        </S.myPostDiv>
-      );
-    }
+        </S.postTextDiv>
+      </S.myPost>
+    );
   });
-  // for (let i = 0; i < Object.keys(userData.user1.posts).length; i++) {
-  //   if ((userInterests = userData.user1.posts[i].id === i)) {
-  //     userPost[i] = (
-  //       <S.myPost>
-  //         <S.postSummary></S.postSummary>
-  //         <S.postIcon></S.postIcon>
-  //         <S.postTag></S.postTag>
-  //       </S.myPost>
-  //     );
-  //   }
-  // }
+
   return (
     <>
       <S.userInfo>
@@ -180,14 +102,15 @@ function MyPage() {
       </S.userInfo>
       <S.userInfoshadow></S.userInfoshadow>
       {Object.keys(userData.user1.posts).length > 0 && (
-        <S.postText top={60} left={20} width={5.5} height={3} Name={postIcon}>
+        <S.postText top={60} left={20} width={136} height={53} Name={postIcon}>
           게시글
         </S.postText>
       )}
 
       {Object.keys(userData.user1.posts).length > 0 && (
-        <S.myPostDiv>{userPost[0]}</S.myPostDiv>
+        <S.myPostDiv>{userPost}</S.myPostDiv>
       )}
+      {/* {...userPost} */}
       {Object.keys(userData.user1.posts).length < 1 && (
         <S.myPostDiv>
           게시글이 없네요.{"\n"}친구들과 멋진 글을 공유해보세요!

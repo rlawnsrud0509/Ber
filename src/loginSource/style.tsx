@@ -420,7 +420,6 @@ export const interestDiv = styled.div`
   left: 67%;
   top: 40%;
   width: 29%;
-  height: 48;
   flex-direction: row;
 `;
 
@@ -432,7 +431,7 @@ export const interests = styled.div`
   font-family: "GothicA1";
   font-size: 11px;
   font-weight: 600;
-  border-radius: 10vw;
+  border-radius: 1rem;
 `;
 
 export const noInterests = styled.div`
@@ -477,8 +476,8 @@ export const postText = styled.div`
   justify-content: left;
   top: ${(props: Berlogo) => props.top}%;
   left: ${(props: Berlogo) => props.left}%;
-  width: ${(props: Berlogo) => props.width}%; //5
-  height: ${(props: Berlogo) => props.height}%; //9
+  width: ${(props: Berlogo) => props.width}px;
+  height: ${(props: Berlogo) => props.height}px;
   background: url(${(props: Berlogo) => props.Name});
   background-repeat: no-repeat;
   background-color: #d6dee9;
@@ -486,8 +485,9 @@ export const postText = styled.div`
   padding: 15px 18px;
   justify-content: right;
   align-items: center;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  box-sizing: border-box;
 `;
 
 export const myPostDiv = styled.div`
@@ -502,6 +502,7 @@ export const myPostDiv = styled.div`
 
 export const myPost = styled.div`
   background-color: #d6dee9;
+
   border-radius: 50px;
   width: 100%;
   height: 319px;
@@ -509,23 +510,25 @@ export const myPost = styled.div`
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+export const postTextDiv = styled.div`
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 export const postTitle = styled.div`
-  position: absolute;
-  left: 40%;
-  width: 31%;
-  top: 18%;
   font-family: "GothicA1";
   font-weight: 600;
   font-size: 24px;
+  margin-bottom: 1rem;
 `;
 
 export const postSummary = styled.div`
-  position: absolute;
-  left: 40%;
-  top: 33%;
-  width: 51%;
   display: flex;
   flex-wrap: wrap;
 `;
@@ -537,52 +540,32 @@ export const postIconDiv = styled.div`
   font-size: 18px;
   font-weight: 600;
   display: flex;
-  position: absolute;
-  width: 18%;
   height: 6%;
   top: 51%;
   left: 40%;
 `;
 
 export const postIcon = styled.div`
-  position: absolute;
-  top: ${(props: Berlogo) => props.top}%;
-  left: ${(props: Berlogo) => props.left}%;
-  width: ${(props: Berlogo) => props.width}%;
-  height: ${(props: Berlogo) => props.height}%;
-  background: url(${(props: Berlogo) => props.Name});
   background-size: cover;
   text-align: right;
+  background-color: #000;
 `;
 
 export const postTagDiv = styled.div`
-  position: absolute;
+  width: 50%;
+  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
-  top: 61%;
-  left: 39.5%;
-  width: 37%;
-  height: 9%;
 `;
 
 export const postTag = styled.div`
   display: inline;
-  padding: 11px 15px;
   background-color: white;
   border: none;
   margin: 4px;
   font-family: "GothicA1";
-  font-size: 11px;
+  font-size: 0.8rem;
   font-weight: 600;
-  border-radius: 10vw;
-`;
-
-export const postImg = styled.div`
-  position: absolute;
-  top: ${(props: Berlogo) => props.top}%;
-  left: ${(props: Berlogo) => props.left}%;
-  width: ${(props: Berlogo) => props.width}%;
-  height: ${(props: Berlogo) => props.height}%;
-  background: url(${(props: Berlogo) => props.Name});
-  background-size: cover;
+  padding: 0.65rem 0.85rem;
+  border-radius: 1rem;
 `;
