@@ -6,16 +6,13 @@ import Smile from "./resource/Smile.svg";
 import postIcon from "./resource/postIcon.svg";
 import heart from "./resource/heart.svg";
 import messege from "./resource/messege.svg";
-import postImg1 from "./resource/postImg1.svg";
-import postImg2 from "./resource/postImg2.svg";
 
 import userData from "./data.json";
 
 function MyPage() {
   let userInterests = null;
-  let postInterests: any = null;
+  let postInterests: any = [[]];
   let userPost: any = [];
-  let postTag: any = [];
 
   //유저 태그
   if (Object.keys(userData.user1.interests).length > 0) {
@@ -24,23 +21,22 @@ function MyPage() {
     });
   }
 
-  //게시글 태그
-  if (Object.keys(userData.user1.posts).length > 0) {
-    postInterests = userData.user1.posts.map((post) => {
-      console.log("포스트 map 값 : ", post);
-      post.tags.map((tag) => {
-        console.log("게시글태그 값 : ", tag);
-        return <S.postTag>{tag}</S.postTag>;
-      });
-    });
-  }
-
   console.log(postInterests);
+  console.log("fewfff : " + userInterests);
 
   userPost = userData.user1.posts.map((post) => {
+    let imgLink: string = `./resource/${post.img}`;
+    console.log(`이미지링크변수값: ` + imgLink);
+
+    //게시글 태그
+    console.log(post.tags);
+    postInterests = post.tags.map((tag) => {
+      return <S.postTag>{tag}</S.postTag>;
+    });
+
     return (
       <S.myPost>
-        <img src={postImg1} alt="" />
+        <img src={imgLink} alt="" />
         <S.postTextDiv>
           <S.postTitle>{post.title}</S.postTitle>
           <S.postSummary>{post.summary}</S.postSummary>

@@ -18,7 +18,7 @@
     "posts": [
       {
         "id": 1,
-        "img": "./resourse/postImg1.svg",
+        "img": "postImg1.svg",
         "title": "1학년 자바 과제 다 한 사람??",
         "summary": "교제 132페이지에 2번 문제wfewfwgqegcqwegcqerg qerg qerg qerg re 코드 설명좀 해주세요 이해가 안 됨",
         "heart": 7,
@@ -27,7 +27,7 @@
       },
       {
         "id": 2,
-        "img": "./resourse/postImg2.svg",
+        "img": "postImg2.svg",
         "title": "1학년 ffff자바 과제 다 한 사람??",
         "summary": "교제 132페이ffff지에 2번 문제 코드......이해가 안 됨",
         "heart": 5,
@@ -35,13 +35,13 @@
         "tags": ["수업", "질문", "Java"]
       },
       {
-        "id": 2,
-        "img": "./resourse/postImg2.svg",
+        "id": 3,
+        "img": "postImg3.svg",
         "title": "1학년 ffff자바 과제 다 한 사람??",
         "summary": "교제 132페이ffff지에 2번 문제 코드......이해가 안 됨",
         "heart": 5,
         "chat": 9,
-        "tags": ["수업", "질문", "Java"]
+        "tags": ["수업", "질문", "Javaf"]
       }
     ]
   }

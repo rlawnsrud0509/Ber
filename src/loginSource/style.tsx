@@ -377,7 +377,7 @@ export const statusMessage = styled.div`
     position: absolute;
     border-left: 12px solid transparent;
     border-right: 12px solid white;
-    border-top: 6px solid transparent;
+    border-top: 17px solid transparent;
     border-bottom: 6px solid transparent;
 
     left: -20px;
@@ -440,7 +440,7 @@ export const noInterests = styled.div`
   color: #676767;
   font-family: "GothicA1";
   font-weight: 600;
-  font-size: 18px;
+  font-size: px;
   margin: auto;
   line-height: 80px;
 `;
@@ -461,7 +461,7 @@ export const tagText = styled.div`
   left: 71%;
   font-family: "GothicA1";
   font-weight: 500;
-  font-size: 17px;
+  font-size: 1rem;
   color: white;
 `;
 
@@ -471,7 +471,7 @@ export const postText = styled.div`
   color: black;
   font-family: "ROBOTO";
   font-weight: 600;
-  font-size: 19px;
+  font-size: 1.25rem;
   text-align: center;
   justify-content: left;
   top: ${(props: Berlogo) => props.top}%;
@@ -482,7 +482,7 @@ export const postText = styled.div`
   background-repeat: no-repeat;
   background-color: #d6dee9;
   background-position: 13% center;
-  padding: 15px 18px;
+  padding: 0.95rem 1.2rem;
   justify-content: right;
   align-items: center;
   border-top-right-radius: 1rem;
@@ -498,18 +498,18 @@ export const myPostDiv = styled.div`
   width: 1064px;
   left: 16%;
   border: none;
+  row-gap: 3rem;
 `;
 
 export const myPost = styled.div`
   background-color: #d6dee9;
 
-  border-radius: 50px;
+  border-radius: 3rem;
   width: 100%;
   height: 319px;
   font-family: "GothicA1";
   font-weight: 500;
-  font-size: 20px;
-  margin-bottom: 40px;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -524,11 +524,12 @@ export const postTextDiv = styled.div`
 export const postTitle = styled.div`
   font-family: "GothicA1";
   font-weight: 600;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 `;
 
 export const postSummary = styled.div`
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
 `;
@@ -537,7 +538,7 @@ export const postIconDiv = styled.div`
   text-align: left;
   align-items: baseline;
   font-size: "ROBOTO";
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 600;
   display: flex;
   height: 6%;
@@ -552,7 +553,7 @@ export const postIcon = styled.div`
 `;
 
 export const postTagDiv = styled.div`
-  width: 50%;
+  width: 80%;
   margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
