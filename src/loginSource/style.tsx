@@ -440,7 +440,7 @@ export const noInterests = styled.div`
   color: #676767;
   font-family: "GothicA1";
   font-weight: 600;
-  font-size: px;
+  font-size: 1rem;
   margin: auto;
   line-height: 80px;
 `;
