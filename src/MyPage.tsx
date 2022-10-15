@@ -106,14 +106,16 @@ function MyPage() {
       {Object.keys(userData.user1.posts).length > 0 && (
         <S.myPostDiv>{userPost}</S.myPostDiv>
       )}
-      {/* {...userPost} */}
+
       {Object.keys(userData.user1.posts).length < 1 && (
         <S.myPostDiv>
           게시글이 없네요.{"\n"}친구들과 멋진 글을 공유해보세요!
         </S.myPostDiv>
       )}
     </S.container>
-  );{/*
+  );
+  {
+    /*
         @@@@마이페이지 개판된거 수정하자~~~!!!
         @@@@마이페이지 개판된거 수정하자~~~!!!
         @@@@마이페이지 개판된거 수정하자~~~!!!
@@ -143,7 +145,8 @@ function MyPage() {
 
 
 
-*/}
+*/
+  }
 }
 
 export default MyPage;
