@@ -291,8 +291,10 @@ export const userInfo = styled.div`
   position: absolute;
   top: 20%;
   left: 16%;
-  width: 1064px;
-  height: 231px;
+  /* width: 1064px;
+  height: 231px; */
+  width: 69vw;
+  height: 16vw;
   background-color: #98adc7;
   border: none;
   border-radius: 2.5vw;
@@ -305,8 +307,11 @@ export const userInfoshadow = styled.div`
   filter: blur(1vw);
   top: 25%;
   left: 18%;
-  width: 1040px;
+  /* width: 1040px;
   height: 200px;
+  */
+  width: 67.3vw;
+  height: 14vw;
   background-color: #777777;
   border: none;
   border-radius: 2.5vw;
@@ -332,7 +337,8 @@ export const userName = styled.div`
   height: 16%;
   left: 23%;
   top: 20%;
-  font-size: 25px;
+  font-size: 1.6vw;
+  /* font-size: 25px; */
   text-align: center;
   color: white;
 `;
@@ -342,21 +348,21 @@ export const userGCN = styled.div`
   position: absolute;
   top: 17%;
   left: 32%;
-  width: 10%;
+  width: 12%;
   height: 16%;
   background-color: white;
   border: none;
   border-radius: 1.3vw;
-  font-size: 13px;
+  font-size: 0.9vw;
   font-weight: 600;
   font-family: "GothicA1";
-  padding-left: 1vw;
+  justify-content: center;
   align-items: center;
 `;
 
 export const statusMessage = styled.div`
   display: flex;
-  position: absolute;
+  position: inherit;
   left: 22%;
   top: 45%;
   width: 25%;
@@ -365,12 +371,13 @@ export const statusMessage = styled.div`
   color: #676767;
   border-radius: 3vw;
   font-family: "GothicA1";
-  font-size: 15px;
+  /* font-size: 16px; */
+  font-size: 0.85vw;
   font-weight: 600;
   white-space: pre-wrap;
   text-align: left;
   align-items: center;
-  padding: 0 4%;
+  padding: 0 2vw;
 
   ::after {
     content: "";
@@ -427,9 +434,10 @@ export const interests = styled.div`
   padding: 11px 15px;
   background-color: white;
   border: none;
-  margin: 4px;
+  margin: 0.25vw;
   font-family: "GothicA1";
-  font-size: 11px;
+  font-size: 0.8vw;
+  /* font-size: 11px; */
   font-weight: 600;
   border-radius: 1rem;
 `;
