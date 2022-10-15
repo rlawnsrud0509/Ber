@@ -30,6 +30,14 @@ interface txtPosition {
   left: number;
 }
 
+export const container = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
 //메일, 키 같은 아이콘 넣을 div
 
 export const Icons = styled.div`
@@ -286,15 +294,10 @@ export const DropBoxli = styled.li`
 //-----------------------------마이페이지--------------------------------
 
 export const userInfo = styled.div`
-  justify-content: center;
   display: flex;
-  position: absolute;
-  top: 20%;
-  left: 16%;
-  /* width: 1064px;
-  height: 231px; */
-  width: 69vw;
-  height: 16vw;
+  margin-top: 12rem;
+  width: 1064px;
+  height: 231px;
   background-color: #98adc7;
   border: none;
   border-radius: 2.5vw;
@@ -303,22 +306,17 @@ export const userInfo = styled.div`
 `;
 
 export const userInfoshadow = styled.div`
-  position: absolute;
   filter: blur(1vw);
-  top: 25%;
-  left: 18%;
-  /* width: 1040px;
+  margin-top: 14rem;
+  margin-left: 2rem;
+  width: 1040px;
   height: 200px;
-  */
-  width: 67.3vw;
-  height: 14vw;
   background-color: #777777;
   border: none;
   border-radius: 2.5vw;
 `;
 
 export const userIcon = styled.div`
-  position: absolute;
   top: ${(props: Berlogo) => props.top}%;
   left: ${(props: Berlogo) => props.left}%;
   width: ${(props: Berlogo) => props.width}%;
@@ -331,38 +329,34 @@ export const userIcon = styled.div`
 `;
 
 export const userName = styled.div`
-  position: absolute;
   font-family: "GothicA1";
   width: 7%;
   height: 16%;
   left: 23%;
   top: 20%;
-  font-size: 1.6vw;
-  /* font-size: 25px; */
+  font-size: 25px;
   text-align: center;
   color: white;
 `;
 
 export const userGCN = styled.div`
   display: flex;
-  position: absolute;
   top: 17%;
   left: 32%;
-  width: 12%;
+  width: 10%;
   height: 16%;
   background-color: white;
   border: none;
   border-radius: 1.3vw;
-  font-size: 0.9vw;
+  font-size: 13px;
   font-weight: 600;
   font-family: "GothicA1";
-  justify-content: center;
+  padding-left: 1vw;
   align-items: center;
 `;
 
 export const statusMessage = styled.div`
   display: flex;
-  position: inherit;
   left: 22%;
   top: 45%;
   width: 25%;
@@ -371,13 +365,12 @@ export const statusMessage = styled.div`
   color: #676767;
   border-radius: 3vw;
   font-family: "GothicA1";
-  /* font-size: 16px; */
-  font-size: 0.85vw;
+  font-size: 15px;
   font-weight: 600;
   white-space: pre-wrap;
   text-align: left;
   align-items: center;
-  padding: 0 2vw;
+  padding: 0 4%;
 
   ::after {
     content: "";
@@ -395,11 +388,6 @@ export const statusMessage = styled.div`
 `;
 
 export const linkIcon = styled.button`
-  position: absolute;
-  top: ${(props: Berlogo) => props.top}%; //20
-  left: ${(props: Berlogo) => props.left}%; //45
-  width: ${(props: Berlogo) => props.width}%; //2
-  height: ${(props: Berlogo) => props.height}%; //9
   background: url(${(props: Berlogo) => props.Name});
   background-position: center bottom;
   border: 3px solid white;
@@ -411,7 +399,6 @@ export const linkIcon = styled.button`
 `;
 
 export const divLine = styled.div`
-  position: absolute;
   left: 62%;
   width: 0%;
   height: 72%;
@@ -421,7 +408,6 @@ export const divLine = styled.div`
 `;
 
 export const interestDiv = styled.div`
-  position: absolute;
   display: flex;
   flex-wrap: wrap;
   left: 67%;
@@ -434,16 +420,14 @@ export const interests = styled.div`
   padding: 11px 15px;
   background-color: white;
   border: none;
-  margin: 0.25vw;
+  margin: 4px;
   font-family: "GothicA1";
-  font-size: 0.8vw;
-  /* font-size: 11px; */
+  font-size: 11px;
   font-weight: 600;
   border-radius: 1rem;
 `;
 
 export const noInterests = styled.div`
-  position: absolute;
   top: 70%;
   color: #676767;
   font-family: "GothicA1";
@@ -454,7 +438,6 @@ export const noInterests = styled.div`
 `;
 
 export const Smile = styled.div`
-  position: absolute;
   top: ${(props: Berlogo) => props.top}%;
   left: ${(props: Berlogo) => props.left}%; //20
   width: ${(props: Berlogo) => props.width}%; //20
@@ -483,7 +466,6 @@ export const postText = styled.div`
   text-align: center;
   justify-content: left;
   top: ${(props: Berlogo) => props.top}%;
-  left: ${(props: Berlogo) => props.left}%;
   width: ${(props: Berlogo) => props.width}px;
   height: ${(props: Berlogo) => props.height}px;
   background: url(${(props: Berlogo) => props.Name});
@@ -501,8 +483,7 @@ export const postText = styled.div`
 export const myPostDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
-  position: absolute;
-  top: 67%;
+  margin-top: 30rem;
   width: 1064px;
   left: 16%;
   border: none;
