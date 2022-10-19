@@ -380,7 +380,7 @@ export const statusMessage = styled.div`
     border-top: 17px solid transparent;
     border-bottom: 6px solid transparent;
 
-    left: -21px;
+    left: -20px;
     bottom: 22px;
   }
 
