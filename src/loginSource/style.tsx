@@ -381,7 +381,7 @@ export const statusMessage = styled.div`
     border-bottom: 6px solid transparent;
 
     left: -20px;
-    bottom: 21px;
+    bottom: 22px;
   }
 
   filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.25));
