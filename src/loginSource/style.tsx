@@ -300,43 +300,42 @@ export const userInfo = styled.div`
   height: 231px;
   background-color: #98adc7;
   border: none;
-  border-radius: 2.5vw;
+  border-radius: 2.5rem;
   z-index: 1;
-  flex-direction: column;
 `;
 
 export const userInfoshadow = styled.div`
-  filter: blur(1vw);
-  margin-top: 14rem;
-  margin-left: 2rem;
+  filter: blur(1rem);
+  margin-top: -12.5rem;
+  margin-left: 1.5rem;
   width: 1040px;
   height: 200px;
   background-color: #777777;
   border: none;
-  border-radius: 2.5vw;
+  border-radius: 2.5rem;
 `;
 
 export const userIcon = styled.div`
-  top: ${(props: Berlogo) => props.top}%;
-  left: ${(props: Berlogo) => props.left}%;
-  width: ${(props: Berlogo) => props.width}%;
-  height: ${(props: Berlogo) => props.height}%;
+  width: 14.5%;
+  height: 61%;
   background-color: white;
   border: none;
   border-radius: 50%;
   background: url(${(props: Berlogo) => props.Name});
   background-size: cover;
+  margin-top: 3rem;
+  margin-left: 2rem;
 `;
 
 export const userName = styled.div`
   font-family: "GothicA1";
-  width: 7%;
+  width: 9%;
   height: 16%;
-  left: 23%;
-  top: 20%;
   font-size: 25px;
   text-align: center;
   color: white;
+  margin-left: 1.5rem;
+  margin-top: 3.3rem;
 `;
 
 export const userGCN = styled.div`
@@ -351,8 +350,10 @@ export const userGCN = styled.div`
   font-size: 13px;
   font-weight: 600;
   font-family: "GothicA1";
-  padding-left: 1vw;
+  justify-content: center;
   align-items: center;
+  margin-left: 1.8rem;
+  margin-top: 3rem;
 `;
 
 export const statusMessage = styled.div`
@@ -371,6 +372,8 @@ export const statusMessage = styled.div`
   text-align: left;
   align-items: center;
   padding: 0 4%;
+  margin-left: -14rem;
+  margin-top: 7rem;
 
   ::after {
     content: "";
@@ -387,17 +390,6 @@ export const statusMessage = styled.div`
   filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.25));
 `;
 
-export const linkIcon = styled.button`
-  background: url(${(props: Berlogo) => props.Name});
-  background-position: center bottom;
-  border: 3px solid white;
-  border-radius: 50%;
-
-  :hover {
-    cursor: pointer;
-  }
-`;
-
 export const divLine = styled.div`
   left: 62%;
   width: 0%;
@@ -405,18 +397,22 @@ export const divLine = styled.div`
   border: 2px solid #e0e0e0;
   background-color: #e0e0e0;
   border-radius: 10vw;
+  margin-left: 2.5rem;
+  margin-top: 2rem;
 `;
 
 export const interestDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
-  left: 67%;
-  top: 40%;
-  width: 29%;
-  flex-direction: row;
+  width: 38%;
+  height: max-content;
+  margin-top: 6rem;
+  margin-left: 3rem;
 `;
 
 export const interests = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: 11px 15px;
   background-color: white;
   border: none;
@@ -425,9 +421,12 @@ export const interests = styled.div`
   font-size: 11px;
   font-weight: 600;
   border-radius: 1rem;
+  width: max-content;
+  height: 1rem;
 `;
 
 export const noInterests = styled.div`
+  position: absolute;
   top: 70%;
   color: #676767;
   font-family: "GothicA1";
@@ -437,23 +436,31 @@ export const noInterests = styled.div`
   line-height: 80px;
 `;
 
+export const interestTextDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-left: -26rem;
+  width: 33%;
+  height: 19%;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Smile = styled.div`
-  top: ${(props: Berlogo) => props.top}%;
-  left: ${(props: Berlogo) => props.left}%; //20
   width: ${(props: Berlogo) => props.width}%; //20
   height: ${(props: Berlogo) => props.height}%; //20
   background: url(${(props: Berlogo) => props.Name});
   background-size: cover;
+  margin-right: 1rem;
 `;
 
 export const tagText = styled.div`
-  position: absolute;
-  top: 21.5%;
-  left: 71%;
   font-family: "GothicA1";
   font-weight: 500;
   font-size: 1rem;
   color: white;
+  width: max-content;
 `;
 
 export const postText = styled.div`

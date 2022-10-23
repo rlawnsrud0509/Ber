@@ -1,7 +1,5 @@
 import * as S from "./loginSource/style";
 import userLogo from "./resource/userIcon.svg";
-import EmailWhite from "./resource/EmailWhite.svg";
-import GithubWhite from "./resource/GithubWhite.svg";
 import Smile from "./resource/Smile.svg";
 import postIcon from "./resource/postIcon.svg";
 import heart from "./resource/heart.svg";
@@ -50,10 +48,10 @@ function MyPage() {
     <S.container>
       <S.userInfo>
         <S.userIcon
-          top={18}
-          left={4}
-          width={15.6}
-          height={66}
+          top={7777}
+          left={7777}
+          width={7777}
+          height={7777}
           Name={userLogo}
         ></S.userIcon>
         <S.userName>
@@ -64,20 +62,6 @@ function MyPage() {
           {userData.user1.studentNumber}번
         </S.userGCN>
         <S.statusMessage>{userData.user1.statusMessage}</S.statusMessage>
-        <S.linkIcon
-          top={18}
-          left={47}
-          width={2.85}
-          height={13.5}
-          Name={GithubWhite}
-        ></S.linkIcon>
-        <S.linkIcon
-          top={18}
-          left={50.5}
-          width={2.85}
-          height={13.5}
-          Name={EmailWhite}
-        ></S.linkIcon>
         <S.divLine></S.divLine>
         <S.interestDiv>
           {Object.keys(userData.user1.interests).length < 1 && (
@@ -85,16 +69,18 @@ function MyPage() {
           )}
           {userInterests}
         </S.interestDiv>
-        <S.Smile
-          top={18}
-          left={67}
-          width={3.1}
-          height={15}
-          Name={Smile}
-        ></S.Smile>
-        <S.tagText>
-          <b>{userData.user1.name}</b>님은 이런 것들에 관심 있어요!
-        </S.tagText>
+        <S.interestTextDiv>
+          <S.Smile
+            top={7777}
+            left={7777}
+            width={10}
+            height={75}
+            Name={Smile}
+          ></S.Smile>
+          <S.tagText>
+            <b>{userData.user1.name}</b>님은 이런 것들에 관심 있어요!
+          </S.tagText>
+        </S.interestTextDiv>
       </S.userInfo>
       <S.userInfoshadow></S.userInfoshadow>
       {Object.keys(userData.user1.posts).length > 0 && (
