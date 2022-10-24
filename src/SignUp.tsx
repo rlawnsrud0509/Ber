@@ -39,7 +39,7 @@ function SignUp() {
 
   return (
     <>
-      <S.loginForm width={650} height={550} top={20} left={28}>
+      <S.loginForm>
         <S.berLogo
           top={-9}
           left={10}
@@ -56,13 +56,7 @@ function SignUp() {
             <br />
             계정 정보
           </S.accountTxt>
-          <S.formInput
-            left={15}
-            top={1.5}
-            width={85}
-            height={27}
-            placeholder="학교 이메일"
-          ></S.formInput>
+          <S.formInput placeholder="학교 이메일"></S.formInput>
           <S.IconDiv left={0} top={1.5} width={15} height={27}>
             <S.Icons left={33} width={34} height={37} Name={Email}></S.Icons>
             <S.CheckIcons
@@ -72,13 +66,7 @@ function SignUp() {
               Name={Check}
             ></S.CheckIcons>
           </S.IconDiv>
-          <S.formInput
-            left={15}
-            top={2.5}
-            width={85}
-            height={27}
-            placeholder="아이디"
-          ></S.formInput>
+          <S.formInput placeholder="아이디"></S.formInput>
           <S.IconDiv left={0} top={2.5} width={15} height={27}>
             <S.Icons left={28} width={43} height={40} Name={Idcard}></S.Icons>
             <S.CheckIcons
@@ -88,14 +76,7 @@ function SignUp() {
               Name={Check}
             ></S.CheckIcons>
           </S.IconDiv>
-          <S.formInput
-            type={"password"}
-            left={15}
-            top={3.5}
-            width={85}
-            height={27}
-            placeholder="비밀번호"
-          ></S.formInput>
+          <S.formInput type={"password"} placeholder="비밀번호"></S.formInput>
           <S.IconDiv left={0} top={3.5} width={15} height={27}>
             <S.Icons left={30} width={30} height={42} Name={Key}></S.Icons>
             <S.CheckIcons
@@ -310,12 +291,6 @@ function SignUp() {
           </S.submitButton>
         )}
       </S.loginForm>
-      <S.loginFormShadow
-        left={33}
-        top={30}
-        width={600}
-        height={531}
-      ></S.loginFormShadow>
     </>
   );
 }

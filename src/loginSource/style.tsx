@@ -100,8 +100,6 @@ export const accountTxt = styled.h1`
 
 // SIGN UP, LOGIN
 export const Letter = styled.h1`
-  position: absolute;
-  top: 3%;
   font-family: "ULTRA";
   font-style: normal;
   font-weight: 400;
@@ -115,15 +113,12 @@ export const Letter = styled.h1`
 export const formInput = styled.input`
   box-sizing: border-box;
   display: flex;
-  position: absolute;
   margin: 5px auto;
-  top: ${(props: SizePosition) => props.top * 32}%;
-  left: ${(props: SizePosition) => props.left}%;
-  width: ${(props: SizePosition) => props.width}%;
-  height: ${(props: SizePosition) => props.height}%;
+  width: 80%;
+  height: 10%;
   border: none;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-top-right-radius: 6rem;
+  border-bottom-right-radius: 6rem;
   z-index: 0;
   ::placeholder {
     font-family: "Noto-Sans";
@@ -181,31 +176,16 @@ export const inputDiv = styled.div`
 //제일 외곽 div선언
 export const loginForm = styled.div`
   display: flex;
-  top: ${(props: SizePosition) => props.top}%;
-  left: ${(props: SizePosition) => props.left}%;
-  width: ${(props: SizePosition) => props.width}px;
-  height: ${(props: SizePosition) => props.height}px;
-  position: absolute;
+  width: 700px;
+  height: 532px;
   box-sizing: border-box;
   background-color: #98adc7;
   color: black;
   border: none;
-  border-radius: 6vw;
-  justify-content: center;
-`;
-
-//외곽div 그림자 선언
-export const loginFormShadow = styled.div`
-  display: flex;
-  position: absolute;
-  z-index: -1;
-  background-color: #494949;
-  opacity: 0.7;
-  filter: blur(50px); //36 75 36 33
-  top: ${(props: SizePosition) => props.top}%;
-  left: ${(props: SizePosition) => props.left}%;
-  width: ${(props: SizePosition) => props.width}px;
-  height: ${(props: SizePosition) => props.height}px;
+  border-radius: 6rem;
+  align-content: center;
+  margin-top: 6rem;
+  box-shadow: 0.5rem 0.5rem 2rem #999999;
 `;
 
 //로고 담을 div 선언
@@ -295,24 +275,14 @@ export const DropBoxli = styled.li`
 
 export const userInfo = styled.div`
   display: flex;
-  margin-top: 12rem;
+  margin-top: 11rem;
   width: 1064px;
   height: 231px;
   background-color: #98adc7;
   border: none;
   border-radius: 2.5rem;
   z-index: 1;
-`;
-
-export const userInfoshadow = styled.div`
-  filter: blur(1rem);
-  margin-top: -12.5rem;
-  margin-left: 1.5rem;
-  width: 1040px;
-  height: 200px;
-  background-color: #777777;
-  border: none;
-  border-radius: 2.5rem;
+  box-shadow: 0.5rem 0.5rem 2rem #999999;
 `;
 
 export const userIcon = styled.div`
@@ -405,9 +375,14 @@ export const interestDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 38%;
-  height: max-content;
+  height: 40%;
   margin-top: 6rem;
   margin-left: 3rem;
+  overflow: scroll;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const interests = styled.div`
@@ -422,17 +397,19 @@ export const interests = styled.div`
   font-weight: 600;
   border-radius: 1rem;
   width: max-content;
+  max-width: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   height: 1rem;
 `;
 
 export const noInterests = styled.div`
-  position: absolute;
-  top: 70%;
   color: #676767;
   font-family: "GothicA1";
   font-weight: 600;
   font-size: 1rem;
-  margin: auto;
+  margin-left: 2.5rem;
   line-height: 80px;
 `;
 
@@ -465,14 +442,12 @@ export const tagText = styled.div`
 
 export const postText = styled.div`
   display: flex;
-  position: absolute;
   color: black;
   font-family: "ROBOTO";
   font-weight: 600;
   font-size: 1.25rem;
   text-align: center;
   justify-content: left;
-  top: ${(props: Berlogo) => props.top}%;
   width: ${(props: Berlogo) => props.width}px;
   height: ${(props: Berlogo) => props.height}px;
   background: url(${(props: Berlogo) => props.Name});
@@ -485,16 +460,29 @@ export const postText = styled.div`
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
   box-sizing: border-box;
+  margin-left: 3rem;
+  margin-top: 5rem;
 `;
 
 export const myPostDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30rem;
   width: 1064px;
   left: 16%;
   border: none;
   row-gap: 3rem;
+  padding-bottom: 3rem;
+  justify-content: center;
+`;
+
+export const noPost = styled.div`
+  font-family: "GothicA1";
+  font-weight: 300;
+  font-size: 34px;
+  white-space: pre-wrap;
+  text-align: center;
+  margin-top: 13rem;
+  margin-bottom: 10rem;
 `;
 
 export const myPost = styled.div`
@@ -509,6 +497,10 @@ export const myPost = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const postTextDiv = styled.div`
@@ -540,6 +532,14 @@ export const postIconDiv = styled.div`
   height: 6%;
   top: 51%;
   left: 40%;
+`;
+
+export const postImg = styled.img`
+  width: 28%;
+  height: 70%;
+  background: url(${(props: Berlogo) => props.Name});
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 
 export const postIcon = styled.div`

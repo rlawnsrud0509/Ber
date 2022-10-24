@@ -4,16 +4,17 @@
     "grade": 1,
     "class": 4,
     "studentNumber": 14,
-    "statusMessage": "사이드 프로젝트 팀원 구하고 있습니다! 상단 게시글 참고해주세요. 👍🏼",
-    "githubLink": "www.github.com",
-    "instagram": "www.instagram.com",
+    "statusMessage": "사이드 프로젝트 팀원 구하고 있습니다efwefwefwefewfewfwefwefwefwefwefwefwefwefew! 상단 게시글 참고해주세요. 👍🏼",
     "interests": [
       "Back-end",
       "Design",
       "강웅빈 최고",
       "한예준이랑 사이좋게 지내기~",
       "또 뭐하지",
-      "디자인 때려치기"
+      "디자인 때려치기",
+      "feefef",
+      "fefwefew",
+      "Fefef"
     ],
     "posts": [
       {
@@ -33,15 +34,6 @@
         "heart": 5,
         "chat": 9,
         "tags": ["수업", "질문", "Java"]
-      },
-      {
-        "id": 3,
-        "img": "postImg3.svg",
-        "title": "1학년 ffff자바 과제 다 한 사람??",
-        "summary": "교제 132페이ffff지에 2번 문제 코드......이해가 안 됨",
-        "heart": 5,
-        "chat": 9,
-        "tags": ["수업", "질문", "Javaf"]
       }
     ]
   }

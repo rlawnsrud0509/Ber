@@ -34,7 +34,13 @@ function MyPage() {
 
     return (
       <S.myPost>
-        <img src={imgLink} alt="" />
+        <S.postImg
+          width={7777}
+          height={7777}
+          top={7777}
+          left={7777}
+          Name={imgLink}
+        ></S.postImg>
         <S.postTextDiv>
           <S.postTitle>{post.title}</S.postTitle>
           <S.postSummary>{post.summary}</S.postSummary>
@@ -77,12 +83,16 @@ function MyPage() {
             height={75}
             Name={Smile}
           ></S.Smile>
-          <S.tagText>
-            <b>{userData.user1.name}</b>님은 이런 것들에 관심 있어요!
-          </S.tagText>
+          {Object.keys(userData.user1.interests).length > 0 && (
+            <S.tagText>
+              <b>{userData.user1.name}</b>님은 이런 것들에 관심 있어요!
+            </S.tagText>
+          )}
+          {Object.keys(userData.user1.interests).length < 1 && (
+            <S.tagText>이런 것들에 관심 있어요!</S.tagText>
+          )}
         </S.interestTextDiv>
       </S.userInfo>
-      <S.userInfoshadow></S.userInfoshadow>
       {Object.keys(userData.user1.posts).length > 0 && (
         <S.postText top={60} left={20} width={136} height={53} Name={postIcon}>
           게시글
@@ -95,7 +105,9 @@ function MyPage() {
 
       {Object.keys(userData.user1.posts).length < 1 && (
         <S.myPostDiv>
-          게시글이 없네요.{"\n"}친구들과 멋진 글을 공유해보세요!
+          <S.noPost>
+            게시글이 없네요.{"\n"} 친구들과 멋진 글을 공유해보세요!
+          </S.noPost>
         </S.myPostDiv>
       )}
     </S.container>

@@ -7,8 +7,8 @@ import BerLogo from "./resource/berlogo.svg";
 
 function Login() {
   return (
-    <>
-      <S.loginForm width={700} height={532} top={22} left={27}>
+    <S.container>
+      <S.loginForm>
         <S.berLogo
           width={30}
           height={22}
@@ -17,13 +17,7 @@ function Login() {
           Name={BerLogo}
         ></S.berLogo>
         <S.Letter>Login</S.Letter>
-        <S.formInput
-          left={25}
-          top={1.1}
-          width={59}
-          height={11}
-          placeholder="학교 이메일"
-        ></S.formInput>
+        <S.formInput placeholder="학교 이메일"></S.formInput>
         <S.IconDiv left={18} top={1.1} width={7} height={11}>
           <S.Icons left={33} width={44} height={33} Name={Email}></S.Icons>
           <S.CheckIcons
@@ -33,15 +27,7 @@ function Login() {
             Name={Check}
           ></S.CheckIcons>
         </S.IconDiv>
-
-        <S.formInput
-          left={25}
-          top={1.6}
-          width={59}
-          height={11}
-          placeholder="비밀번호"
-          type={"password"}
-        ></S.formInput>
+        <S.formInput placeholder="비밀번호" type={"password"}></S.formInput>
         <S.IconDiv left={18} top={1.6} width={7} height={11}>
           <S.Icons left={33} width={44} height={33} Name={Key}></S.Icons>
           <S.CheckIcons
@@ -61,13 +47,7 @@ function Login() {
           로그인
         </S.submitButton>
       </S.loginForm>
-      <S.loginFormShadow
-        left={38}
-        top={26}
-        width={550}
-        height={532}
-      ></S.loginFormShadow>
-    </>
+    </S.container>
   );
 }
 
