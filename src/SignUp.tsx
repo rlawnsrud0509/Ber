@@ -27,7 +27,7 @@ function SignUp() {
     SetshowDropBox4(!showDropBox4);
   }
 
-  //드롭박스에서 선택한 값들은 요쪽 state변수에 담김.
+  //드롭박스에서 선택한 값들은 state변수에 담김.
   let [Gender, setGender] = useState("성별");
   let [Grade, setGrade] = useState("학년");
   let [Class, setClass] = useState("반");
@@ -39,8 +39,8 @@ function SignUp() {
 
   return (
     <S.container>
-      <S.loginForm width={702} height={650}>
-        <S.berLogo Name={BerLogo} width={30} height={15}></S.berLogo>
+      <S.loginForm width={702} height={600}>
+        <S.berLogo Name={BerLogo} width={27} height={18}></S.berLogo>
         <S.Letter>Sign Up</S.Letter>
 
         <S.inputDiv>
@@ -49,31 +49,31 @@ function SignUp() {
             계정 정보
           </S.accountTxt>
           <S.IconDivLeft>
-            <S.Icons Name={Email} width={33} height={33}></S.Icons>
+            <S.Icons Name={Email} width={39} height={35}></S.Icons>
           </S.IconDivLeft>
           <S.formInput placeholder="학교 이메일"></S.formInput>
           <S.IconDivRight>
-            <S.CheckIcons Name={Check} width={33} height={33}></S.CheckIcons>
+            <S.CheckIcons Name={Check} width={34} height={41.5}></S.CheckIcons>
           </S.IconDivRight>
         </S.inputDiv>
 
         <S.inputDiv>
           <S.IconDivLeft>
-            <S.Icons Name={Idcard} width={33} height={33}></S.Icons>
+            <S.Icons Name={Idcard} width={47} height={41}></S.Icons>
           </S.IconDivLeft>
           <S.formInput placeholder="아이디"></S.formInput>
           <S.IconDivRight>
-            <S.CheckIcons Name={Check} width={33} height={33}></S.CheckIcons>
+            <S.CheckIcons Name={Check} width={34} height={41.5}></S.CheckIcons>
           </S.IconDivRight>
         </S.inputDiv>
 
         <S.inputDiv>
           <S.IconDivLeft>
-            <S.Icons Name={Key} width={33} height={33}></S.Icons>
+            <S.Icons Name={Key} width={39} height={35}></S.Icons>
           </S.IconDivLeft>
           <S.formInput type={"password"} placeholder="비밀번호"></S.formInput>
           <S.IconDivRight>
-            <S.CheckIcons Name={Check} width={33} height={33}></S.CheckIcons>
+            <S.CheckIcons Name={Check} width={34} height={41.5}></S.CheckIcons>
           </S.IconDivRight>
         </S.inputDiv>
 

@@ -14,14 +14,6 @@ interface HW {
   height: number;
 }
 
-interface Berlogo {
-  width: number;
-  height: number;
-  top: number;
-  left: number;
-  Name: string;
-}
-
 interface txtPosition {
   top: number;
   left: number;
@@ -142,7 +134,8 @@ export const submitButton = styled.button`
   font-size: 1rem;
   font-weight: bold;
   background-color: white;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   border: none;
   color: #777777;
   transition-timing-function: ease-out;
@@ -201,7 +194,7 @@ export const berLogo = styled.div`
 export const DropBox = styled.button`
   position: relative;
   display: flex;
-  width: 30%;
+  width: 15%;
   height: 70%;
   border: none;
   border-radius: 20px;
@@ -289,7 +282,7 @@ export const userIcon = styled.div`
   background-color: white;
   border: none;
   border-radius: 50%;
-  background: url(${(props: Berlogo) => props.Name});
+  background: url(${(props: IconName) => props.Name});
   background-size: cover;
   margin-top: 3rem;
   margin-left: 2rem;
@@ -423,9 +416,9 @@ export const interestTextDiv = styled.div`
 `;
 
 export const Smile = styled.div`
-  width: ${(props: Berlogo) => props.width}%; //20
-  height: ${(props: Berlogo) => props.height}%; //20
-  background: url(${(props: Berlogo) => props.Name});
+  width: ${(props: IconName) => props.width}%; //20
+  height: ${(props: IconName) => props.height}%; //20
+  background: url(${(props: IconName) => props.Name});
   background-size: cover;
   margin-right: 1rem;
 `;
@@ -446,9 +439,9 @@ export const postText = styled.div`
   font-size: 1.25rem;
   text-align: center;
   justify-content: left;
-  width: ${(props: Berlogo) => props.width}px;
-  height: ${(props: Berlogo) => props.height}px;
-  background: url(${(props: Berlogo) => props.Name});
+  width: ${(props: IconName) => props.width}px;
+  height: ${(props: IconName) => props.height}px;
+  background: url(${(props: IconName) => props.Name});
   background-repeat: no-repeat;
   background-color: #d6dee9;
   background-position: 13% center;
@@ -535,7 +528,7 @@ export const postIconDiv = styled.div`
 export const postImg = styled.img`
   width: 28%;
   height: 70%;
-  background: url(${(props: Berlogo) => props.Name});
+  background: url(${(props: IconName) => props.Name});
   background-size: cover;
   background-repeat: no-repeat;
 `;

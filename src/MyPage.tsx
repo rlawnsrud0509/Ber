@@ -34,13 +34,7 @@ function MyPage() {
 
     return (
       <S.myPost>
-        <S.postImg
-          width={7777}
-          height={7777}
-          top={7777}
-          left={7777}
-          Name={imgLink}
-        ></S.postImg>
+        <S.postImg width={7777} height={7777} Name={imgLink}></S.postImg>
         <S.postTextDiv>
           <S.postTitle>{post.title}</S.postTitle>
           <S.postSummary>{post.summary}</S.postSummary>
@@ -53,13 +47,7 @@ function MyPage() {
   return (
     <S.container>
       <S.userInfo>
-        <S.userIcon
-          top={7777}
-          left={7777}
-          width={7777}
-          height={7777}
-          Name={userLogo}
-        ></S.userIcon>
+        <S.userIcon width={7777} height={7777} Name={userLogo}></S.userIcon>
         <S.userName>
           <b>{userData.user1.name}</b>
         </S.userName>
@@ -76,13 +64,7 @@ function MyPage() {
           {userInterests}
         </S.interestDiv>
         <S.interestTextDiv>
-          <S.Smile
-            top={7777}
-            left={7777}
-            width={10}
-            height={75}
-            Name={Smile}
-          ></S.Smile>
+          <S.Smile width={10} height={75} Name={Smile}></S.Smile>
           {Object.keys(userData.user1.interests).length > 0 && (
             <S.tagText>
               <b>{userData.user1.name}</b>님은 이런 것들에 관심 있어요!
@@ -94,7 +76,7 @@ function MyPage() {
         </S.interestTextDiv>
       </S.userInfo>
       {Object.keys(userData.user1.posts).length > 0 && (
-        <S.postText top={60} left={20} width={136} height={53} Name={postIcon}>
+        <S.postText width={136} height={53} Name={postIcon}>
           게시글
         </S.postText>
       )}
