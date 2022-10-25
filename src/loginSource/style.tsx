@@ -3,16 +3,13 @@ import "../App.css";
 
 //스타일트컴포넌트 props 요소 가져오기 위해 선언
 
-interface SizePosition {
-  width: number;
-  height: number;
-  top: number;
-  left: number;
-}
-
 interface IconName {
   Name: string;
-  left: number;
+  width: number;
+  height: number;
+}
+
+interface HW {
   width: number;
   height: number;
 }
@@ -42,12 +39,10 @@ export const container = styled.div`
 
 export const Icons = styled.div`
   display: flex;
-  position: absolute;
-  top: 30%;
-  left: ${(props: IconName) => props.left}%;
+  background-image: url(${(props: IconName) => props.Name});
   width: ${(props: IconName) => props.width}%;
   height: ${(props: IconName) => props.height}%;
-  background-image: url(${(props: IconName) => props.Name});
+  margin: auto;
   background-size: cover;
   z-index: 1;
 `;
@@ -55,12 +50,10 @@ export const Icons = styled.div`
 //input태그 오른쪽 끝의 체크 아이콘
 
 export const CheckIcons = styled.div`
-  display: flex;
-  position: absolute;
-  top: 34%;
-  left: ${(props: IconName) => props.left}%;
   width: ${(props: IconName) => props.width}%;
   height: ${(props: IconName) => props.height}%;
+  margin: auto;
+  display: flex;
   background-image: url(${(props: IconName) => props.Name});
   background-size: cover;
   z-index: 3;
@@ -68,18 +61,26 @@ export const CheckIcons = styled.div`
 
 // 아이콘 div 넣어서 input이랑 연결할 div
 
-export const IconDiv = styled.div`
+export const IconDivLeft = styled.div`
+  width: 8%;
+  height: 100%;
+  display: flex;
+  border: none;
+  border-top-left-radius: 6rem;
+  border-bottom-left-radius: 6rem;
+  font-family: "Noto-Sans";
+  z-index: 3;
+  background-color: white;
+`;
+
+export const IconDivRight = styled.div`
+  width: 10%;
+  height: 100%;
   box-sizing: border-box;
   display: flex;
-  position: absolute;
-  top: ${(props: SizePosition) => props.top * 32}%;
-  left: ${(props: SizePosition) => props.left}%;
-  width: ${(props: SizePosition) => props.width}%;
-  height: ${(props: SizePosition) => props.height}%;
-  margin: 5px auto;
   border: none;
-  border-top-left-radius: 40px;
-  border-bottom-left-radius: 40px;
+  border-top-right-radius: 6rem;
+  border-bottom-right-radius: 6rem;
   font-family: "Noto-Sans";
   z-index: 3;
   background-color: white;
@@ -106,6 +107,8 @@ export const Letter = styled.h1`
   font-size: 50px;
   line-height: 64px;
   color: white;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 `;
 
 // 아이디, 학교 이메일, 비번 작성할 input태그
@@ -113,16 +116,14 @@ export const Letter = styled.h1`
 export const formInput = styled.input`
   box-sizing: border-box;
   display: flex;
-  margin: 5px auto;
-  width: 80%;
-  height: 10%;
+  width: 50%;
+  height: 100%;
   border: none;
-  border-top-right-radius: 6rem;
-  border-bottom-right-radius: 6rem;
   z-index: 0;
+  font-size: 0.9rem;
   ::placeholder {
     font-family: "Noto-Sans";
-    margin-left: 10px;
+    margin-left: 20px;
   }
   :focus {
     outline: none;
@@ -131,19 +132,17 @@ export const formInput = styled.input`
 
 //확인버튼
 export const submitButton = styled.button`
-  top: ${(props: SizePosition) => props.top}%;
-  left: ${(props: SizePosition) => props.left}%;
-  width: ${(props: SizePosition) => props.width}%;
-  height: ${(props: SizePosition) => props.height}%;
-  border-radius: 20px;
+  border-radius: 3rem;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  width: 25%;
+  height: 10%;
   display: flex;
   font-family: "Noto-Sans";
-  font-size: 1vw;
+  font-size: 1rem;
   font-weight: bold;
   background-color: white;
+  margin-top: 3rem;
   border: none;
   color: #777777;
   transition-timing-function: ease-out;
@@ -161,14 +160,13 @@ export const submitButton = styled.button`
 `;
 //요소 묶을 div 선언
 export const inputDiv = styled.div`
+  width: 100%;
+  height: 10%;
   text-indent: 500px;
   display: flex;
-  position: absolute;
-  top: ${(props: SizePosition) => props.top}%;
-  left: ${(props: SizePosition) => props.left}%;
-  width: ${(props: SizePosition) => props.width}%;
-  height: ${(props: SizePosition) => props.height}%;
   align-items: center;
+  justify-content: center;
+  margin: 0.5rem auto;
   text-align: left;
   color: white;
 `;
@@ -176,26 +174,26 @@ export const inputDiv = styled.div`
 //제일 외곽 div선언
 export const loginForm = styled.div`
   display: flex;
-  width: 700px;
-  height: 532px;
+  flex-direction: column;
+  width: ${(props: HW) => props.width}px;
+  height: ${(props: HW) => props.height}px;
   box-sizing: border-box;
   background-color: #98adc7;
   color: black;
   border: none;
   border-radius: 6rem;
-  align-content: center;
+  align-items: center;
   margin-top: 6rem;
   box-shadow: 0.5rem 0.5rem 2rem #999999;
 `;
 
 //로고 담을 div 선언
 export const berLogo = styled.div`
-  top: ${(props: Berlogo) => props.top}%;
-  left: ${(props: Berlogo) => props.left}%;
-  width: ${(props: Berlogo) => props.width}%;
-  height: ${(props: Berlogo) => props.height}%;
-  position: absolute;
-  background-image: url(${(props: Berlogo) => props.Name});
+  margin-top: -3.7rem;
+  margin-left: -25rem;
+  width: ${(props: IconName) => props.width}%;
+  height: ${(props: IconName) => props.height}%;
+  background-image: url(${(props: IconName) => props.Name});
   background-size: cover;
 `;
 
