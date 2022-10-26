@@ -16,7 +16,6 @@ function MyPage() {
 
   userPost = userData.user1.posts.map((post) => {
     let imgLink: string = "resource/" + post.img;
-    console.log(`이미지링크변수값: ` + imgLink);
 
     //게시글 태그
     postInterests = post.tags.map((tag) => {
@@ -25,12 +24,22 @@ function MyPage() {
 
     return (
       <S.myPost>
-        <S.postImg width={50} height={80} Name={imgLink} alt=""></S.postImg>
+        <S.postImg width={7777} height={7777} Name={imgLink} alt=""></S.postImg>
 
         <S.postTextDiv>
           <S.postTitle>{post.title}</S.postTitle>
           <S.postSummary>{post.summary}</S.postSummary>
-          <S.postIcon></S.postIcon>
+          <S.postIconDiv>
+            <S.postIcon
+              width={5}
+              height={100}
+              Name={"resource/heart.svg"}
+            ></S.postIcon>
+            {post.heart}
+            <S.postIcon width={5} height={110} Name={"resource/messege.svg"}>
+              {post.chat}
+            </S.postIcon>
+          </S.postIconDiv>
           <S.postTagDiv>{postInterests}</S.postTagDiv>
         </S.postTextDiv>
       </S.myPost>

@@ -485,7 +485,6 @@ export const myPost = styled.div`
   font-size: 1.2rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
   transition-timing-function: ease-out;
   transition-duration: 0.1s;
 
@@ -523,9 +522,7 @@ export const postIconDiv = styled.div`
   font-size: 1.1rem;
   font-weight: 600;
   display: flex;
-  height: 6%;
-  top: 51%;
-  left: 40%;
+  width: 100%;
 `;
 
 export const postImg = styled.img`
@@ -537,11 +534,10 @@ export const postImg = styled.img`
 `;
 
 export const postIcon = styled.div`
-  width: 10%;
-  height: 20%;
-  background-size: cover;
-  text-align: right;
-  background-color: #000;
+  width: ${(props: IconName) => props.width}%;
+  height: ${(props: IconName) => props.height}%;
+
+  background: url(${(props: IconName) => props.Name});
 `;
 
 export const postTagDiv = styled.div`
