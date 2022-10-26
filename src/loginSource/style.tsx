@@ -319,8 +319,6 @@ export const userGCN = styled.div`
 
 export const statusMessage = styled.div`
   display: flex;
-  left: 22%;
-  top: 45%;
   width: 25%;
   height: 30%;
   background-color: white;
@@ -332,7 +330,7 @@ export const statusMessage = styled.div`
   white-space: pre-wrap;
   text-align: left;
   align-items: center;
-  padding: 0 4%;
+  padding: 0.3% 2%;
   margin-left: -14rem;
   margin-top: 7rem;
 
@@ -488,9 +486,13 @@ export const myPost = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
 
   :hover {
+    background-color: #d7e2f0;
     cursor: pointer;
+    text-decoration: underline;
   }
 `;
 
@@ -511,6 +513,7 @@ export const postSummary = styled.div`
   width: 90%;
   display: flex;
   flex-wrap: wrap;
+  text-overflow: ellipsis;
 `;
 
 export const postIconDiv = styled.div`
@@ -526,14 +529,16 @@ export const postIconDiv = styled.div`
 `;
 
 export const postImg = styled.img`
-  width: 28%;
-  height: 70%;
-  background: url(${(props: IconName) => props.Name});
+  width: 29%;
+  height: 65%;
   background-size: cover;
   background-repeat: no-repeat;
+  background: url(${(props: IconName) => props.Name});
 `;
 
 export const postIcon = styled.div`
+  width: 10%;
+  height: 20%;
   background-size: cover;
   text-align: right;
   background-color: #000;

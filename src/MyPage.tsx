@@ -1,9 +1,4 @@
 import * as S from "./loginSource/style";
-import userLogo from "./resource/userIcon.svg";
-import Smile from "./resource/Smile.svg";
-import postIcon from "./resource/postIcon.svg";
-import heart from "./resource/heart.svg";
-import messege from "./resource/messege.svg";
 
 import userData from "./data.json";
 
@@ -14,30 +9,28 @@ function MyPage() {
 
   //유저 태그
   if (Object.keys(userData.user1.interests).length > 0) {
-    userInterests = userData.user1.interests.map(function (interest: String) {
+    userInterests = userData.user1.interests.map(function (interest: string) {
       return <S.interests>{interest}</S.interests>;
     });
   }
 
-  console.log(postInterests);
-  console.log("fewfff : " + userInterests);
-
   userPost = userData.user1.posts.map((post) => {
-    let imgLink: string = `./resource/${post.img}`;
+    let imgLink: string = "resource/" + post.img;
     console.log(`이미지링크변수값: ` + imgLink);
 
     //게시글 태그
-    console.log(post.tags);
     postInterests = post.tags.map((tag) => {
       return <S.postTag>{tag}</S.postTag>;
     });
 
     return (
       <S.myPost>
-        <S.postImg width={7777} height={7777} Name={imgLink}></S.postImg>
+        <S.postImg width={50} height={80} Name={imgLink} alt=""></S.postImg>
+
         <S.postTextDiv>
           <S.postTitle>{post.title}</S.postTitle>
           <S.postSummary>{post.summary}</S.postSummary>
+          <S.postIcon></S.postIcon>
           <S.postTagDiv>{postInterests}</S.postTagDiv>
         </S.postTextDiv>
       </S.myPost>
@@ -47,7 +40,11 @@ function MyPage() {
   return (
     <S.container>
       <S.userInfo>
-        <S.userIcon width={7777} height={7777} Name={userLogo}></S.userIcon>
+        <S.userIcon
+          width={7777}
+          height={7777}
+          Name={"resource/userIcon.svg"}
+        ></S.userIcon>
         <S.userName>
           <b>{userData.user1.name}</b>
         </S.userName>
@@ -64,7 +61,7 @@ function MyPage() {
           {userInterests}
         </S.interestDiv>
         <S.interestTextDiv>
-          <S.Smile width={10} height={75} Name={Smile}></S.Smile>
+          <S.Smile width={10} height={75} Name={"resource/Smile.svg"}></S.Smile>
           {Object.keys(userData.user1.interests).length > 0 && (
             <S.tagText>
               <b>{userData.user1.name}</b>님은 이런 것들에 관심 있어요!
@@ -76,7 +73,7 @@ function MyPage() {
         </S.interestTextDiv>
       </S.userInfo>
       {Object.keys(userData.user1.posts).length > 0 && (
-        <S.postText width={136} height={53} Name={postIcon}>
+        <S.postText width={136} height={53} Name={"resource/postIcon.svg"}>
           게시글
         </S.postText>
       )}
