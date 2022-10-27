@@ -330,7 +330,7 @@ export const statusMessage = styled.div`
   white-space: pre-wrap;
   text-align: left;
   align-items: center;
-  padding: 0.3% 2%;
+  padding: 0.3% 2.5%;
   margin-left: -14rem;
   margin-top: 7rem;
 
@@ -475,6 +475,7 @@ export const noPost = styled.div`
 `;
 
 export const myPost = styled.div`
+  position: relative;
   background-color: #d6dee9;
 
   border-radius: 3rem;
@@ -485,6 +486,7 @@ export const myPost = styled.div`
   font-size: 1.2rem;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   transition-timing-function: ease-out;
   transition-duration: 0.1s;
 
@@ -516,13 +518,23 @@ export const postSummary = styled.div`
 `;
 
 export const postIconDiv = styled.div`
-  text-align: left;
-  align-items: baseline;
+  align-items: center;
   font-size: "ROBOTO";
   font-size: 1.1rem;
   font-weight: 600;
   display: flex;
   width: 100%;
+  margin-top: 0.95rem;
+  margin-left: -0.75rem;
+`;
+
+export const postIcon = styled.div`
+  width: ${(props: IconName) => props.width}%;
+  height: ${(props: IconName) => props.height}%;
+
+  background: url(${(props: IconName) => props.Name});
+  margin-left: 0.75rem;
+  margin-right: 0.35rem;
 `;
 
 export const postImg = styled.img`
@@ -533,16 +545,10 @@ export const postImg = styled.img`
   background: url(${(props: IconName) => props.Name});
 `;
 
-export const postIcon = styled.div`
-  width: ${(props: IconName) => props.width}%;
-  height: ${(props: IconName) => props.height}%;
-
-  background: url(${(props: IconName) => props.Name});
-`;
-
 export const postTagDiv = styled.div`
   width: 80%;
   margin-top: 1rem;
+  margin-left: -0.5rem;
   display: flex;
   flex-wrap: wrap;
 `;

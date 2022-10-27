@@ -32,13 +32,16 @@ function MyPage() {
           <S.postIconDiv>
             <S.postIcon
               width={5}
-              height={100}
+              height={110}
               Name={"resource/heart.svg"}
             ></S.postIcon>
             {post.heart}
-            <S.postIcon width={5} height={110} Name={"resource/messege.svg"}>
-              {post.chat}
-            </S.postIcon>
+            <S.postIcon
+              width={5}
+              height={110}
+              Name={"resource/messege.svg"}
+            ></S.postIcon>
+            {post.chat}
           </S.postIconDiv>
           <S.postTagDiv>{postInterests}</S.postTagDiv>
         </S.postTextDiv>
