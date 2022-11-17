@@ -268,9 +268,7 @@ function SignUp() {
           </S.DropBox>
         </S.inputDiv>
 
-        {showDropBox1 || showDropBox2 || showDropBox3 || showDropBox4 || (
-          <S.submitButton type={"submit"}>가입하기</S.submitButton>
-        )}
+        <S.submitButton type={"submit"}>가입하기</S.submitButton>
       </S.loginForm>
     </S.container>
   );

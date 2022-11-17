@@ -176,7 +176,7 @@ export const loginForm = styled.div`
   border: none;
   border-radius: 6rem;
   align-items: center;
-  margin-top: 6rem;
+  margin-top: 7rem;
   box-shadow: 0.5rem 0.5rem 2rem #999999;
 `;
 
@@ -219,8 +219,9 @@ export const DropBoxul = styled.ul`
   list-style: none;
   padding: 0;
   width: 100%;
-  height: 165%;
+  height: 260%;
   top: 105%;
+  border-radius: 1rem;
   overflow: scroll;
   font-size: 0;
   display: flex;
@@ -242,7 +243,8 @@ export const DropBoxli = styled.li`
   background-color: white;
   color: black;
   border-radius: 10px;
-  height: 30%;
+  height: 75%;
+  max-height: 23px;
   text-align: center;
   margin: 0.1vw auto;
   font-size: 16px;
